@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0D2B55" />
+    <title>LandCore | Landing Page Personalizzate per Aziende Italiane</title>
+    <meta
+      name="description"
+      content="LandCore crea landing page su misura per PMI e professionisti italiani. Analisi del settore, copy persuasivo e design personalizzato. Consegna in 10 giorni."
+    />
+    <meta
+      name="keywords"
+      content="landing page personalizzate, landing page italia, agenzia landing page, conversioni sito web, landing page PMI"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://landcore.it" />
+    <meta property="og:title" content="LandCore | Landing Page che Posizionano" />
+    <meta
+      property="og:description"
+      content="Creiamo landing page su misura per aziende italiane. Strategia, copy e design personalizzati. Consulenza gratuita."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://landcore.it" />
+    <meta property="og:image" content="https://landcore.it/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root { --white: #ffffff; --bg-light: #f4f6f9; --blue-deep: #0d2b55; --blue-accent: #1a5cff; --text-body: #4a4a5a; --border: #e0e4ed; --shadow-soft: 0 2px 16px rgba(13, 43, 85, 0.07); --container: 1160px; --radius-card: 8px; --radius-btn: 4px; }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--text-body);
+        background: var(--white);
+      }
+
+      img,
+      svg {
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      .logo {
+        margin: 0;
+        font-family: "Syne", sans-serif;
+        color: var(--blue-deep);
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .container {
+        width: min(100% - 2rem, var(--container));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .bg-light {
+        background: var(--bg-light);
+      }
+
+      .section-intro {
+        text-align: center;
+        max-width: 820px;
+        margin: 0 auto 36px;
+      }
+
+      .section-intro p {
+        margin-top: 14px;
+      }
+
+      .section-title {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 16px;
+      }
+
+      .section-title::after {
+        content: "";
+        width: 48px;
+        height: 3px;
+        background: var(--blue-accent);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform 0.6s ease;
+      }
+
+      .in-view .section-title::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+
+      .card {
+        background: var(--white);
+        border-radius: var(--radius-card);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.2rem;
+        border-radius: var(--radius-btn);
+        border: 1px solid transparent;
+        font-weight: 600;
+        transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+          border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn:hover,
+      .interactive:hover {
+        transform: scale(1.02);
+      }
+
+      .btn-primary {
+        background: var(--blue-accent);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: #1245cc;
+      }
+
+      .btn-outline {
+        border-color: var(--blue-accent);
+        color: var(--blue-accent);
+        background: transparent;
+      }
+
+      .btn-white {
+        background: var(--white);
+        color: var(--blue-deep);
+        font-weight: 700;
+      }
+
+      .btn-white:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .pulse-cta {
+        animation: ctaPulse 2s infinite;
+      }
+
+      @keyframes ctaPulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(26, 92, 255, 0.35);
+        }
+        70% {
+          box-shadow: 0 0 0 11px rgba(26, 92, 255, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(26, 92, 255, 0);
+        }
+      }
+
+      .trust-line {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        font-style: italic;
+        color: #6f7688;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--blue-accent);
+        outline-offset: 2px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        z-index: 9999;
+        background: transparent;
+      }
+
+      .scroll-progress-bar {
+        height: 100%;
+        width: 100%;
+        background: var(--blue-accent);
+        transform-origin: left center;
+        transform: scaleX(0);
+      }
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 120;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .site-header.scrolled {
+        background: rgba(255, 255, 255, 0.85);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(8px);
+      }
+
+      .nav-wrap {
+        height: 74px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+
+      .desktop-nav,
+      .desktop-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        margin-left: auto;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-btn);
+        background: var(--white);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        width: 18px;
+        height: 2px;
+        background: var(--blue-deep);
+        display: block;
+        position: relative;
+        transition: transform 0.25s ease, background-color 0.25s ease;
+      }
+
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: var(--blue-deep);
+        left: 0;
+        transition: transform 0.25s ease, top 0.25s ease;
+      }
+
+      .menu-toggle span::before {
+        top: -6px;
+      }
+
+      .menu-toggle span::after {
+        top: 6px;
+      }
+
+      .menu-toggle.active span {
+        background: transparent;
+      }
+
+      .menu-toggle.active span::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .menu-toggle.active span::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background: rgba(13, 43, 85, 0.95);
+        display: grid;
+        place-content: center;
+        text-align: center;
+        gap: 1.2rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 110;
+      }
+
+      .mobile-menu.open {
+        transform: translateY(0);
+      }
+
+      .mobile-menu a {
+        color: var(--white);
+        font-family: "Syne", sans-serif;
+        font-size: 1.35rem;
+      }
+
+      .hero {
+        padding-top: 120px;
+        background: radial-gradient(circle at 1px 1px, var(--bg-light) 1px, transparent 0);
+        background-size: 18px 18px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-mesh {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .hero-blob {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        opacity: 0.15;
+        filter: blur(80px);
+      }
+
+      .hero-blob.one {
+        background: var(--blue-accent);
+        top: 5%;
+        left: -8%;
+        animation: driftA 9s infinite ease-in-out;
+      }
+
+      .hero-blob.two {
+        background: #9ec2ff;
+        bottom: 10%;
+        right: -6%;
+        animation: driftB 11s infinite ease-in-out;
+      }
+
+      .hero-blob.three {
+        background: var(--white);
+        top: 40%;
+        left: 45%;
+        animation: driftC 10s infinite ease-in-out;
+      }
+
+      @keyframes driftA {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(40px, -25px);
+        }
+      }
+
+      @keyframes driftB {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-35px, 20px);
+        }
+      }
+
+      @keyframes driftC {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(20px, -20px);
+        }
+      }
+
+      .hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .hero-copy p {
+        margin-top: 20px;
+        max-width: 640px;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+      }
+
+      .micro-stats {
+        margin-top: 20px;
+        font-size: 0.96rem;
+        font-weight: 500;
+        color: var(--blue-deep);
+      }
+
+      .hero-visual {
+        position: relative;
+        min-height: 330px;
+        display: grid;
+        place-items: center;
+      }
+
+      .stack-card {
+        position: absolute;
+        width: min(90%, 340px);
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        box-shadow: 0 15px 35px rgba(13, 43, 85, 0.12);
+        padding: 18px;
+      }
+
+      .stack-card h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .bar {
+        height: 10px;
+        background: var(--bg-light);
+        border-radius: 999px;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+
+      .bar span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #97b7ff, var(--blue-accent));
+      }
+
+      .stack-1 {
+        transform: rotate(-5deg) translate(-35px, 30px);
+      }
+
+      .stack-2 {
+        transform: rotate(3deg);
+      }
+
+      .stack-3 {
+        transform: rotate(8deg) translate(35px, -30px);
+      }
+
+      .metric-badge {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        background: var(--blue-deep);
+        color: var(--white);
+        border-radius: 999px;
+        padding: 0.48rem 0.85rem;
+        font-size: 0.87rem;
+        font-weight: 700;
+      }
+
+      .numbers-bar {
+        background: var(--blue-accent);
+        color: var(--white);
+        padding: 28px 0;
+      }
+
+      .numbers-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .numbers-value {
+        font-family: "Syne", sans-serif;
+        font-size: 2.8rem;
+        line-height: 1;
+        font-weight: 700;
+      }
+
+      .numbers-label {
+        margin-top: 8px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .proof-bar {
+        background: var(--blue-deep);
+        color: var(--white);
+        padding: 28px 0;
+      }
+
+      .proof-content {
+        display: grid;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .proof-logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+      }
+
+      .proof-logos span {
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.12);
+        min-width: 92px;
+        font-size: 0.9rem;
+      }
+
+      .problem-grid,
+      .why-grid,
+      .testimonials-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .problem-card {
+        border-top: 3px solid var(--blue-accent);
+        padding: 24px;
+      }
+
+      .problem-card:hover {
+        box-shadow: inset 0 0 0 1px var(--blue-accent), 0 8px 32px rgba(26, 92, 255, 0.1);
+      }
+
+      .problem-card svg,
+      .why-card svg,
+      .method-step svg,
+      .sector-card svg {
+        width: 28px;
+        height: 28px;
+        color: var(--blue-accent);
+        margin-bottom: 12px;
+      }
+
+      .problem-card h3,
+      .method-step h3,
+      .why-card h3,
+      .sector-card h3,
+      .testimonial-card h3 {
+        font-size: 1.16rem;
+        margin-bottom: 8px;
+      }
+
+      .method-timeline {
+        display: grid;
+        gap: 1rem;
+        position: relative;
+        border-left: 2px dashed #b9ccff;
+        padding-left: 20px;
+      }
+
+      .method-step {
+        position: relative;
+        padding: 22px;
+        overflow: hidden;
+      }
+
+      .step-number {
+        position: absolute;
+        top: 8px;
+        right: 14px;
+        font-size: 3.3rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #eaf0ff;
+        font-family: "Syne", sans-serif;
+        pointer-events: none;
+      }
+
+      .sectors-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+
+      .sector-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-card);
+        background: var(--white);
+        padding: 14px;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .sector-card:hover {
+        transform: translateY(-4px) scale(1.02);
+        border-color: var(--blue-accent);
+        box-shadow: inset 0 0 0 1px var(--blue-accent), 0 8px 32px rgba(26, 92, 255, 0.1);
+      }
+
+      .sector-card h3 {
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .why-card {
+        padding: 24px;
+      }
+
+      .testimonial-card {
+        padding: 26px;
+        border-radius: 12px;
+      }
+
+      .quote-mark {
+        font-family: "Syne", sans-serif;
+        font-size: 4rem;
+        line-height: 0.9;
+        color: var(--blue-accent);
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-top: 8px;
+      }
+
+      .testimonial-meta {
+        margin-top: 18px;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #dce7ff;
+        color: var(--blue-deep);
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .meta-name {
+        font-weight: 700;
+        color: var(--blue-deep);
+      }
+
+      .meta-role {
+        color: #677086;
+        font-size: 0.92rem;
+      }
+
+      .faq-list {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid #d7deeb;
+        transition: background-color 0.25s ease;
+      }
+
+      .faq-item.open {
+        background: rgba(26, 92, 255, 0.04);
+      }
+
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: 0;
+        padding: 18px 8px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font: inherit;
+        font-weight: 600;
+        color: var(--blue-deep);
+        cursor: pointer;
+      }
+
+      .chevron {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.25s ease;
+        flex-shrink: 0;
+      }
+
+      .faq-item.open .chevron {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 8px;
+      }
+
+      .faq-answer p {
+        padding-bottom: 16px;
+      }
+
+      .cta-final {
+        background: var(--blue-deep);
+        color: var(--white);
+        text-align: center;
+        padding: 120px 0;
+      }
+
+      .cta-final h2,
+      .cta-final p {
+        color: var(--white);
+      }
+
+      .cta-final p {
+        margin: 12px auto 0;
+        max-width: 760px;
+      }
+
+      .cta-final .btn {
+        margin-top: 26px;
+      }
+
+      .cta-note {
+        margin-top: 14px;
+        font-size: 0.93rem;
+        opacity: 0.95;
+      }
+
+      .cta-final .trust-line {
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .footer {
+        background: #0a0a0a;
+        color: #f1f1f1;
+      }
+
+      .footer-grid {
+        padding: 46px 0 28px;
+        display: grid;
+        gap: 1.3rem;
+      }
+
+      .footer-logo {
+        color: var(--white);
+      }
+
+      .footer-muted {
+        color: #b8b8b8;
+      }
+
+      .footer a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #1f1f1f;
+        padding: 14px 0 20px;
+        font-size: 0.88rem;
+        color: #b8b8b8;
+      }
+
+      .mobile-sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 60px;
+        background: var(--blue-accent);
+        z-index: 140;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .mobile-sticky-cta.show {
+        transform: translateY(0);
+      }
+
+      .mobile-sticky-cta a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 700;
+      }
+
+      .back-to-top {
+        position: fixed;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 0;
+        right: 18px;
+        bottom: 78px;
+        background: var(--blue-deep);
+        color: var(--white);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(14px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 150;
+      }
+
+      .back-to-top.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .exit-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.62);
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+        z-index: 200;
+        padding: 1rem;
+      }
+
+      .exit-modal.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .exit-card {
+        width: min(100%, 520px);
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.2);
+        padding: 24px;
+        text-align: center;
+      }
+
+      .exit-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .exit-card p {
+        margin-bottom: 18px;
+      }
+
+      .exit-close-link {
+        margin-top: 12px;
+        display: inline-block;
+        color: #6f7688;
+        font-size: 0.92rem;
+        background: none;
+        border: 0;
+        cursor: pointer;
+      }
+
+      [data-animate] {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+
+      [data-animate].in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      [data-stagger] > * {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+
+      [data-stagger].in-view > * {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (min-width: 768px) {
+        .section {
+          padding: 100px 0;
+        }
+
+        .desktop-nav {
+          display: flex;
+          justify-content: center;
+          gap: 1.3rem;
+        }
+
+        .desktop-nav a {
+          font-weight: 500;
+          color: var(--text-body);
+          transition: color 0.2s ease;
+          position: relative;
+        }
+
+        .desktop-nav a:hover {
+          color: var(--blue-accent);
+        }
+
+        .desktop-nav a + a {
+          padding-left: 1.1rem;
+        }
+
+        .desktop-nav a + a::before {
+          content: "·";
+          position: absolute;
+          left: 0.35rem;
+          color: #9aa3b8;
+        }
+
+        .desktop-cta {
+          display: inline-flex;
+        }
+
+        .menu-toggle,
+        .mobile-menu,
+        .mobile-sticky-cta {
+          display: none;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1.2fr 0.8fr;
+          align-items: center;
+        }
+
+        .numbers-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .proof-content {
+          grid-template-columns: auto 1fr;
+          align-items: center;
+          gap: 1.8rem;
+          text-align: left;
+        }
+
+        .proof-logos {
+          justify-content: flex-end;
+        }
+
+        .problem-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 1.2rem;
+        }
+
+        .method-timeline {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          border-left: 0;
+          padding-left: 0;
+          gap: 1.2rem;
+        }
+
+        .method-timeline::before {
+          content: "";
+          position: absolute;
+          left: 8%;
+          right: 8%;
+          top: 50%;
+          border-top: 2px dashed #b9ccff;
+          transform: translateY(-50%);
+          z-index: 0;
+        }
+
+        .method-step {
+          z-index: 1;
+        }
+
+        .sectors-grid {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          gap: 1rem;
+        }
+
+        .why-grid,
+        .testimonials-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1.2rem;
+        }
+
+        .testimonials-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .footer-grid {
+          grid-template-columns: 1.2fr 1fr 1fr;
+          align-items: start;
+        }
+
+        .back-to-top {
+          bottom: 24px;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "LandCore",
+        "url": "https://landcore.it",
+        "description": "Agenzia italiana specializzata nella creazione di landing page personalizzate per PMI e professionisti. Analisi del settore, copywriting persuasivo e design su misura.",
+        "areaServed": "IT",
+        "serviceType": "Landing Page Design e Ottimizzazione Conversioni",
+        "priceRange": "€€",
+        "inLanguage": "it-IT"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+
+    <header class="site-header" id="home">
+      <div class="container nav-wrap">
+        <a href="#home" class="logo">LandCore</a>
+        <nav class="desktop-nav" aria-label="Navigazione principale">
+          <a href="#metodo">Metodo</a>
+          <a href="#settori">Settori</a>
+          <a href="#perche-noi">Perch&eacute; noi</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#cta" class="btn btn-primary pulse-cta desktop-cta interactive">Consulenza Gratuita &rarr;</a>
+        <button
+          class="menu-toggle"
+          aria-label="Apri menu navigazione"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#metodo">Metodo</a>
+      <a href="#settori">Settori</a>
+      <a href="#perche-noi">Perch&eacute; noi</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cta" class="btn btn-white pulse-cta">Consulenza Gratuita &rarr;</a>
+    </div>
+
+    <main>
+      <section class="hero section" role="region" aria-labelledby="hero-title">
+        <div class="hero-mesh" aria-hidden="true">
+          <span class="hero-blob one"></span>
+          <span class="hero-blob two"></span>
+          <span class="hero-blob three"></span>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy" data-animate>
+            <h1 id="hero-title">La tua Prossima Landing Page Far&agrave; una Cosa Sola: Vendere.</h1>
+            <p>
+              Troppi siti sembrano professionali ma non convertono. LandCore analizza il tuo settore, studia i tuoi
+              clienti e costruisce la pagina giusta - quella che porta risultati misurabili.
+            </p>
+            <div class="hero-actions">
+              <a href="#cta" class="btn btn-primary pulse-cta interactive">Richiedi una Consulenza Gratuita</a>
+              <a href="#metodo" class="btn btn-outline interactive">Scopri il Metodo</a>
+            </div>
+            <p class="trust-line">Oltre 120 aziende ci hanno gi&agrave; scelto</p>
+            <p class="micro-stats">+120 landing realizzate · 10 settori coperti · Consegna in 10 giorni</p>
+          </div>
+
+          <div class="hero-visual" data-animate>
+            <article class="stack-card stack-1">
+              <h3>Headliner Settore</h3>
+              <div class="bar"><span style="width: 68%"></span></div>
+              <div class="bar"><span style="width: 81%"></span></div>
+              <div class="bar"><span style="width: 57%"></span></div>
+            </article>
+            <article class="stack-card stack-2">
+              <h3>Offerta e Prova Sociale</h3>
+              <div class="bar"><span style="width: 74%"></span></div>
+              <div class="bar"><span style="width: 66%"></span></div>
+              <div class="bar"><span style="width: 84%"></span></div>
+            </article>
+            <article class="stack-card stack-3">
+              <h3>CTA Strategica</h3>
+              <div class="bar"><span style="width: 89%"></span></div>
+              <div class="bar"><span style="width: 71%"></span></div>
+              <div class="bar"><span style="width: 63%"></span></div>
+            </article>
+            <div class="metric-badge">+ 47% conversioni</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="numbers-bar" role="region" aria-labelledby="numbers-title">
+        <div class="container" data-animate>
+          <h2 id="numbers-title" class="sr-only">Numeri LandCore</h2>
+          <div class="numbers-grid" data-stagger>
+            <div>
+              <div class="numbers-value" data-counter="120" data-suffix="+">0</div>
+              <p class="numbers-label">Landing realizzate</p>
+            </div>
+            <div>
+              <div class="numbers-value" data-counter="10">0</div>
+              <p class="numbers-label">Settori coperti</p>
+            </div>
+            <div>
+              <div class="numbers-value" data-counter="94" data-suffix="%">0</div>
+              <p class="numbers-label">Clienti soddisfatti</p>
+            </div>
+            <div>
+              <div class="numbers-value" data-counter="10" data-suffix="gg">0</div>
+              <p class="numbers-label">Tempo medio consegna</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-bar" role="region" aria-labelledby="proof-title">
+        <div class="container proof-content" data-animate>
+          <h2 id="proof-title" class="sr-only">Prova Sociale</h2>
+          <p>Oltre 120 aziende italiane hanno scelto LandCore per crescere online.</p>
+          <div class="proof-logos" data-stagger>
+            <span>Cliente</span>
+            <span>Cliente</span>
+            <span>Cliente</span>
+            <span>Cliente</span>
+            <span>Cliente</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light" role="region" aria-labelledby="problema-title">
+        <div class="container">
+          <div class="section-intro" data-animate>
+            <h2 id="problema-title" class="section-title">Il problema delle landing page in Italia.</h2>
+            <p>
+              La maggior parte delle pagine web italiane non converte perch&eacute; manca il fondamentale: il
+              posizionamento.
+            </p>
+          </div>
+
+          <div class="problem-grid" data-stagger>
+            <article class="problem-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="8" y="8" width="11" height="11" rx="2"></rect>
+                <rect x="5" y="5" width="11" height="11" rx="2"></rect>
+              </svg>
+              <h3>Design copiato dai competitor</h3>
+              <p>Sembrare tutti uguali &egrave; il modo pi&ugrave; rapido per non essere scelti.</p>
+            </article>
+
+            <article class="problem-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20 15a3 3 0 0 1-3 3H9l-5 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3z"></path>
+                <path d="M12 8a2 2 0 0 1 2 2c0 1.5-2 2-2 3"></path>
+                <circle cx="12" cy="16" r="1"></circle>
+              </svg>
+              <h3>Messaggi generici e vaghi</h3>
+              <p>Se parli a tutti, non parli a nessuno. Il cliente ideale non si riconosce.</p>
+            </article>
+
+            <article class="problem-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="8"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 4V2M4 12H2M12 22v-2M22 12h-2"></path>
+              </svg>
+              <h3>Nessuna strategia di posizionamento</h3>
+              <p>Una bella pagina senza strategia &egrave; solo un costo, non un investimento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="metodo" role="region" aria-labelledby="metodo-title">
+        <div class="container">
+          <div class="section-intro" data-animate>
+            <h2 id="metodo-title" class="section-title">Il Metodo LandCore in 3 Fasi.</h2>
+            <p>Un processo collaudato che parte dalla realt&agrave; della tua azienda, non da un template.</p>
+          </div>
+
+          <div class="method-timeline" data-stagger>
+            <article class="method-step card" data-animate>
+              <span class="step-number">01</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.5-3.5"></path>
+              </svg>
+              <h3>Analisi &amp; Ascolto</h3>
+              <p>
+                Studiamo il tuo settore, i tuoi competitor e il tuo cliente ideale. Niente assunzioni, solo dati e
+                conversazioni reali.
+              </p>
+            </article>
+
+            <article class="method-step card" data-animate>
+              <span class="step-number">02</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 20h16"></path>
+                <path d="M5 16l5-5 3 3 6-6"></path>
+              </svg>
+              <h3>Posizionamento &amp; Copy</h3>
+              <p>
+                Definiamo il tuo vantaggio unico e scriviamo un messaggio che colpisce. Il copy &egrave; il cuore di ogni
+                conversione.
+              </p>
+            </article>
+
+            <article class="method-step card" data-animate>
+              <span class="step-number">03</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <path d="M8 8h8M8 12h8M8 16h5"></path>
+              </svg>
+              <h3>Design &amp; Consegna</h3>
+              <p>
+                Realizziamo la landing con un design su misura, ottimizzata per mobile e pronta a convertire entro 10
+                giorni lavorativi.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light" id="settori" role="region" aria-labelledby="settori-title">
+        <div class="container">
+          <div class="section-intro" data-animate>
+            <h2 id="settori-title" class="section-title">Conosciamo il tuo settore.</h2>
+            <p>
+              Non lavoriamo con template universali. Ogni settore ha il suo linguaggio, le sue obiezioni, i suoi
+              clienti.
+            </p>
+          </div>
+
+          <div class="sectors-grid" data-stagger>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5h8v2"></path></svg>
+              <h3>Avvocati &amp; Studi Legali</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4c-3.2 0-6 2.3-6 5.5S8.7 16 12 20c3.3-4 6-7.2 6-10.5S15.2 4 12 4z"></path><circle cx="12" cy="9.5" r="2"></circle></svg>
+              <h3>Dentisti &amp; Cliniche</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16"></path><path d="M7 5v7a5 5 0 0 0 10 0V5"></path><path d="M10 5V3M14 5V3"></path></svg>
+              <h3>Ristoranti &amp; Hotel</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="19" r="1.6"></circle><circle cx="17" cy="19" r="1.6"></circle><path d="M3 4h2l2.3 10h10.5l2-7H7.5"></path></svg>
+              <h3>E-commerce</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 7l3 3"></path><path d="M5 16l7-7 3 3-7 7H5v-3z"></path></svg>
+              <h3>Artigiani &amp; Installatori</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18"></path><path d="M5 8a7 7 0 0 1 14 0"></path><path d="M5 16a7 7 0 0 0 14 0"></path></svg>
+              <h3>Coach &amp; Formatori</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10l9-7 9 7"></path><path d="M5 10v10h14V10"></path></svg>
+              <h3>Agenzie Immobiliari</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 12h12"></path><path d="M8 8v8M16 8v8"></path><rect x="4" y="6" width="16" height="12" rx="2"></rect></svg>
+              <h3>Palestre &amp; Wellness</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v6c0 5-3.4 7.5-8 8-4.6-.5-8-3-8-8V7l8-4z"></path></svg>
+              <h3>Agenzie Assicurative</h3>
+            </article>
+            <article class="sector-card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+              <h3>Studi Commercialisti</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="perche-noi" role="region" aria-labelledby="why-title">
+        <div class="container">
+          <div class="section-intro" data-animate>
+            <h2 id="why-title" class="section-title">Quello che ci rende diversi.</h2>
+          </div>
+
+          <div class="why-grid" data-stagger>
+            <article class="why-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 4-9 4-9-4 9-4z"></path><path d="M3 11l9 4 9-4"></path><path d="M3 15l9 4 9-4"></path></svg>
+              <h3>Ricerca sul settore inclusa</h3>
+              <p>Prima di scrivere una riga, studiamo chi sei e chi vuoi raggiungere.</p>
+            </article>
+            <article class="why-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16"></path><path d="M8 4h8v4H8z"></path><path d="M8 12h8M6 16h12"></path></svg>
+              <h3>Copy scritto da professionisti</h3>
+              <p>Testi persuasivi in italiano, calibrati sul tuo pubblico e tono di voce.</p>
+            </article>
+            <article class="why-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg>
+              <h3>Design sempre su misura</h3>
+              <p>Nessun template. Ogni progetto parte da zero, costruito attorno alla tua identit&agrave;.</p>
+            </article>
+            <article class="why-card card" data-animate>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+              <h3>Consegna in 10 giorni lavorativi</h3>
+              <p>Processo efficiente e trasparente, con aggiornamenti costanti e revisioni incluse.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials" role="region" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-intro" data-animate>
+            <h2 id="testimonials-title" class="section-title">Cosa dicono i nostri clienti.</h2>
+            <p>Risultati reali da aziende reali.</p>
+          </div>
+          <div class="testimonials-grid" data-stagger>
+            <article class="testimonial-card card">
+              <p class="quote-mark">&ldquo;</p>
+              <p class="testimonial-text">
+                Prima avevamo un sito bellissimo che non portava un cliente. In tre settimane dal lancio della
+                landing LandCore abbiamo ricevuto 14 richieste di preventivo.
+              </p>
+              <div class="testimonial-meta">
+                <div class="avatar" aria-hidden="true">MT</div>
+                <div>
+                  <p class="meta-name">Marco T.</p>
+                  <p class="meta-role">Titolare, Studio Legale - Milano</p>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card card">
+              <p class="quote-mark">&ldquo;</p>
+              <p class="testimonial-text">
+                Il processo &egrave; stato sorprendentemente semplice. Hanno capito subito il nostro settore e il nostro
+                paziente ideale. La pagina parla esattamente alle persone giuste.
+              </p>
+              <div class="testimonial-meta">
+                <div class="avatar" aria-hidden="true">LV</div>
+                <div>
+                  <p class="meta-name">Dott.ssa Laura V.</p>
+                  <p class="meta-role">Medico Estetico - Roma</p>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card card">
+              <p class="quote-mark">&ldquo;</p>
+              <p class="testimonial-text">
+                Consegna puntuale, revisioni veloci e risultato professionale. Il ROI si &egrave; visto gi&agrave; nel primo mese.
+              </p>
+              <div class="testimonial-meta">
+                <div class="avatar" aria-hidden="true">SR</div>
+                <div>
+                  <p class="meta-name">Stefano R.</p>
+                  <p class="meta-role">E-commerce Manager - Bologna</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light" id="faq" role="region" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-intro" data-animate>
+            <h2 id="faq-title" class="section-title">Domande frequenti.</h2>
+          </div>
+
+          <div class="faq-list" data-stagger>
+            <article class="faq-item open">
+              <button class="faq-question" type="button" aria-label="Apri risposta: Quanto costa una landing page con LandCore?">
+                Quanto costa una landing page con LandCore?
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="faq-answer" style="max-height: 180px">
+                <p>
+                  Ogni progetto &egrave; diverso perch&eacute; ogni azienda &egrave; diversa. Il costo dipende dalla complessit&agrave; del settore,
+                  dalla lunghezza della pagina e dai servizi inclusi. Offriamo una consulenza gratuita per capire insieme
+                  il budget giusto per i tuoi obiettivi.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-label="Apri risposta: Quanto tempo ci vuole dalla richiesta alla consegna?">
+                Quanto tempo ci vuole dalla richiesta alla consegna?
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Il nostro processo standard prevede consegna entro 10 giorni lavorativi dall'approvazione del brief. Per
+                  progetti complessi i tempi possono variare, ma ti comunichiamo sempre una data precisa.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-label="Apri risposta: Devo gi&agrave; avere un sito web per lavorare con voi?">
+                Devo gi&agrave; avere un sito web per lavorare con voi?
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No. La landing page pu&ograve; essere una pagina standalone con dominio dedicato oppure integrata nel tuo sito
+                  esistente. Gestiamo entrambe le soluzioni senza costi aggiuntivi.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-label="Apri risposta: Fornite anche dominio e hosting?">
+                Fornite anche dominio e hosting?
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Possiamo affiancarti nella scelta e configurazione di dominio e hosting, oppure lavorare con il tuo
+                  provider esistente. Ti guidiamo in ogni caso.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-label="Apri risposta: Come si misura il successo di una landing page?">
+                Come si misura il successo di una landing page?
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Installiamo Google Analytics 4 e il tracking delle conversioni. Ti consegniamo un documento con i KPI da
+                  monitorare e come interpretarli per ottimizzare nel tempo.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final" id="cta" role="region" aria-labelledby="cta-title">
+        <div class="container" data-animate>
+          <h2 id="cta-title" class="section-title">Ogni giorno senza una landing page efficace &egrave; un cliente che va dalla concorrenza.</h2>
+          <p>
+            La consulenza &egrave; gratuita, dura 20 minuti e ti diremo onestamente se possiamo aiutarti. Nessun obbligo.
+          </p>
+          <a href="#home" class="btn btn-white pulse-cta interactive">Prenota la tua consulenza gratuita</a>
+          <p class="trust-line">Oltre 120 aziende ci hanno gi&agrave; scelto</p>
+          <p class="cta-note">Nessun venditore aggressivo. Solo una conversazione onesta.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3 class="logo footer-logo">LandCore</h3>
+          <p class="footer-muted">Landing Page che Posizionano. Non Solo Pagine Web.</p>
+        </div>
+
+        <nav>
+          <a href="#metodo">Metodo</a><br />
+          <a href="#settori">Settori</a><br />
+          <a href="#perche-noi">Perch&eacute; noi</a><br />
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div>
+          <a href="#">Privacy Policy</a><br />
+          <a href="#">Cookie Policy</a><br />
+          <a href="#">Termini di Servizio</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2025 LandCore — P.IVA 12345678901 — Tutti i diritti riservati</div>
+    </footer>
+
+    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+      <a href="#cta" class="pulse-cta">Prenota Consulenza Gratuita &rarr;</a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Torna in alto">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>
+    </button>
+
+    <div class="exit-modal" id="exitModal" aria-hidden="true">
+      <div class="exit-card" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+        <h3 id="exit-title">Aspetta - la consulenza &egrave; gratuita.</h3>
+        <p>Prima di andare, prenota 20 minuti con noi. Zero impegno, zero venditori.</p>
+        <a href="#cta" class="btn btn-primary pulse-cta" id="exitCta">Prenota ora</a>
+        <button type="button" class="exit-close-link" id="exitCloseLink">No grazie</button>
+      </div>
+    </div>
+
+    <script>
+      const header = document.querySelector('.site-header');
+      const progressBar = document.querySelector('.scroll-progress-bar');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('#mobile-menu');
+      const allMenuLinks = document.querySelectorAll('a[href^="#"]');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const animatedElements = document.querySelectorAll('[data-animate], [data-stagger]');
+      const counters = document.querySelectorAll('[data-counter]');
+      const numbersSection = document.querySelector('.numbers-bar');
+      const heroSection = document.querySelector('.hero');
+      const stickyMobileCta = document.querySelector('#mobile-sticky-cta');
+      const backToTop = document.querySelector('#backToTop');
+      const exitModal = document.querySelector('#exitModal');
+      const exitCloseLink = document.querySelector('#exitCloseLink');
+      const exitCta = document.querySelector('#exitCta');
+
+      let hasShownExit = false;
+      let countersStarted = false;
+
+      const updateScrollUI = () => {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? window.scrollY / docHeight : 0;
+        progressBar.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+
+        if (window.scrollY > 400) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      };
+
+      updateScrollUI();
+      window.addEventListener('scroll', updateScrollUI, { passive: true });
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          menuToggle.classList.toggle('active', isOpen);
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+      }
+
+      allMenuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          if (mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        button.addEventListener('click', () => {
+          faqItems.forEach((other) => {
+            const otherAnswer = other.querySelector('.faq-answer');
+            if (other !== item) {
+              other.classList.remove('open');
+              otherAnswer.style.maxHeight = null;
+            }
+          });
+
+          const isOpen = item.classList.toggle('open');
+          answer.style.maxHeight = isOpen ? `${answer.scrollHeight}px` : null;
+        });
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.target.hasAttribute('data-stagger')) {
+                const children = entry.target.querySelectorAll(':scope > *');
+                children.forEach((child, idx) => {
+                  child.style.transitionDelay = `${idx * 70}ms`;
+                });
+              }
+              entry.target.classList.add('in-view');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -40px 0px'
+        }
+      );
+
+      animatedElements.forEach((el) => revealObserver.observe(el));
+
+      const animateCounter = (el) => {
+        const target = Number(el.getAttribute('data-counter'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const step = (now) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.floor(eased * target);
+          el.textContent = `${value}${suffix}`;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = `${target}${suffix}`;
+          }
+        };
+
+        requestAnimationFrame(step);
+      };
+
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !countersStarted) {
+              countersStarted = true;
+              counters.forEach((counter) => animateCounter(counter));
+              counterObserver.unobserve(numbersSection);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      if (numbersSection) {
+        counterObserver.observe(numbersSection);
+      }
+
+      const stickyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (window.innerWidth >= 768) return;
+            if (entry.isIntersecting) {
+              stickyMobileCta.classList.remove('show');
+            } else {
+              stickyMobileCta.classList.add('show');
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (heroSection) {
+        stickyObserver.observe(heroSection);
+      }
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      const openExitModal = () => {
+        if (hasShownExit) return;
+        hasShownExit = true;
+        exitModal.classList.add('open');
+        exitModal.setAttribute('aria-hidden', 'false');
+      };
+
+      const closeExitModal = () => {
+        exitModal.classList.remove('open');
+        exitModal.setAttribute('aria-hidden', 'true');
+      };
+
+      document.addEventListener('mouseleave', (event) => {
+        if (event.clientY <= 0 && !hasShownExit) {
+          openExitModal();
+        }
+      });
+
+      exitModal.addEventListener('click', (event) => {
+        if (event.target === exitModal) {
+          closeExitModal();
+        }
+      });
+
+      exitCloseLink.addEventListener('click', closeExitModal);
+      exitCta.addEventListener('click', closeExitModal);
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && exitModal.classList.contains('open')) {
+          closeExitModal();
+        }
+      });
+    </script>
+  </body>
+</html>
