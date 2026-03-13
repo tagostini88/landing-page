@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0D2B55" />
+    <meta name="theme-color" content="#080808" />
     <title>LandCore | Landing Page su Misura — Design, Copy e Sviluppo</title>
     <meta
       name="description"
@@ -15,10 +15,10 @@
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://landcore.it" />
-    <meta property="og:title" content="LandCore | Landing Page che Posizionano" />
+    <meta property="og:title" content="LandCore | Landing Page su Misura — Design, Copy e Sviluppo" />
     <meta
       property="og:description"
-      content="Creiamo landing page su misura per aziende italiane. Strategia, copy e design personalizzati. Consulenza gratuita."
+      content="Landing page personalizzate per aziende italiane: design originale, copy su misura, sviluppo tecnico e immagini."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://landcore.it" />
@@ -28,12 +28,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      :root { --white: #ffffff; --bg-light: #f4f6f9; --blue-deep: #0d2b55; --blue-accent: #1a5cff; --text-body: #4a4a5a; --border: #e0e4ed; --shadow-soft: 0 2px 16px rgba(13, 43, 85, 0.07); --container: 1160px; --radius-card: 8px; --radius-btn: 4px; }
+      :root {
+        --black: #080808;
+        --black-soft: #111111;
+        --surface: #161616;
+        --surface-2: #1e1e1e;
+        --border: rgba(255, 255, 255, 0.07);
+        --gold: #c9a96e;
+        --gold-light: #e8d5a3;
+        --white: #f5f0e8;
+        --white-muted: rgba(245, 240, 232, 0.45);
+        --white-dim: rgba(245, 240, 232, 0.15);
+        --white-line: rgba(245, 240, 232, 0.07);
+        --overlay-dark: rgba(8, 8, 8, 0.92);
+        --overlay-modal: rgba(8, 8, 8, 0.85);
+        --overlay-noise: rgba(245, 240, 232, 0.035);
+        --overlay-scan: rgba(245, 240, 232, 0.015);
+        --ok: var(--gold);
+        --bad: rgba(245, 120, 120, 0.7);
+        --shadow-deep: rgba(8, 8, 8, 0.6);
+        --transparent: rgba(8, 8, 8, 0);
+        --gold-pulse-start: rgba(201, 169, 110, 0.4);
+        --gold-pulse-end: rgba(201, 169, 110, 0);
+        --gold-glow-04: rgba(201, 169, 110, 0.04);
+        --gold-glow-03: rgba(201, 169, 110, 0.03);
+        --gold-glow-06: rgba(201, 169, 110, 0.06);
+        --gold-glow-08: rgba(201, 169, 110, 0.08);
+        --gold-glow-15: rgba(201, 169, 110, 0.15);
+        --gold-border-30: rgba(201, 169, 110, 0.3);
+        --gold-border-25: rgba(201, 169, 110, 0.25);
+        --gold-border-20: rgba(201, 169, 110, 0.2);
+        --grid-line: rgba(245, 240, 232, 0.018);
+        --menu-overlay: rgba(8, 8, 8, 0.97);
+        --sticky-overlay: rgba(8, 8, 8, 0.95);
+      }
 
       * {
         box-sizing: border-box;
@@ -45,16 +78,16 @@
 
       body {
         margin: 0;
-        font-family: "Inter", sans-serif;
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: var(--text-body);
-        background: var(--white);
+        font-family: "DM Sans", sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.8;
+        background: var(--black);
+        color: var(--white-muted);
       }
 
-      img,
-      svg {
-        display: block;
+      body.nav-open {
+        overflow: hidden;
       }
 
       a {
@@ -62,1092 +95,1163 @@
         text-decoration: none;
       }
 
+      p,
       h1,
       h2,
       h3,
-      .logo {
+      h4 {
         margin: 0;
-        font-family: "Syne", sans-serif;
-        color: var(--blue-deep);
       }
 
-      h1 {
-        font-size: clamp(2.4rem, 5vw, 4rem);
-        line-height: 1.08;
-        letter-spacing: -0.02em;
-      }
-
-      h2 {
-        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-        line-height: 1.15;
-        letter-spacing: -0.01em;
-      }
-
-      p {
-        margin: 0;
+      h1,
+      h2,
+      h3,
+      h4,
+      .display-font {
+        font-family: "Cormorant Garamond", serif;
+        color: var(--white);
       }
 
       .container {
-        width: min(100% - 2rem, var(--container));
+        width: min(100% - 48px, 1200px);
         margin: 0 auto;
       }
 
       .section {
-        padding: 60px 0;
+        padding: 140px 0;
       }
 
-      .bg-light {
-        background: var(--bg-light);
+      .section-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0;
       }
 
-      .section-intro {
-        text-align: center;
-        max-width: 820px;
-        margin: 0 auto 36px;
-      }
-
-      .section-intro p {
-        margin-top: 14px;
-      }
-
-      .section-title {
+      .overline {
         display: inline-block;
-        position: relative;
-        padding-bottom: 16px;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--gold);
+        font-weight: 500;
+        font-family: "DM Sans", sans-serif;
+        margin-bottom: 18px;
       }
 
-      .section-title::after {
-        content: "";
-        width: 48px;
-        height: 3px;
-        background: var(--blue-accent);
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%) scaleX(0);
-        transform-origin: center;
-        transition: transform 0.6s ease;
+      h1 {
+        font-size: clamp(4rem, 9vw, 9rem);
+        font-weight: 300;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
       }
 
-      .in-view .section-title::after {
-        transform: translateX(-50%) scaleX(1);
+      h2 {
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        font-weight: 300;
+        line-height: 1.05;
       }
 
-      .card {
-        background: var(--white);
-        border-radius: var(--radius-card);
-        box-shadow: var(--shadow-soft);
+      h3 {
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        font-weight: 400;
       }
 
       .btn {
+        border: 1px solid var(--gold);
+        background: transparent;
+        color: var(--gold);
+        padding: 14px 32px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0.75rem 1.2rem;
-        border-radius: var(--radius-btn);
-        border: 1px solid transparent;
-        font-weight: 600;
-        transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease,
-          border-color 0.2s ease, box-shadow 0.2s ease;
       }
 
-      .btn:hover,
-      .interactive:hover {
-        transform: scale(1.02);
+      .btn:hover {
+        background: var(--gold);
+        color: var(--black);
       }
 
       .btn-primary {
-        background: var(--blue-accent);
+        background: var(--gold);
+        color: var(--black);
+      }
+
+      .btn-secondary {
+        border-color: var(--white-dim);
         color: var(--white);
       }
 
-      .btn-primary:hover {
-        background: #1245cc;
+      .btn-secondary:hover {
+        border-color: var(--gold);
       }
 
-      .btn-outline {
-        border-color: var(--blue-accent);
-        color: var(--blue-accent);
-        background: transparent;
+      .pulse-gold {
+        animation: pulseGold 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
       }
 
-      .btn-white {
-        background: var(--white);
-        color: var(--blue-deep);
-        font-weight: 700;
-      }
-
-      .btn-white:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      }
-
-      .pulse-cta {
-        animation: ctaPulse 2s infinite;
-      }
-
-      @keyframes ctaPulse {
+      @keyframes pulseGold {
         0% {
-          box-shadow: 0 0 0 0 rgba(26, 92, 255, 0.35);
-        }
-        70% {
-          box-shadow: 0 0 0 11px rgba(26, 92, 255, 0);
+          box-shadow: 0 0 0 0 var(--gold-pulse-start);
         }
         100% {
-          box-shadow: 0 0 0 0 rgba(26, 92, 255, 0);
+          box-shadow: 0 0 0 14px var(--gold-pulse-end);
         }
       }
 
-      .trust-line {
-        margin-top: 10px;
-        font-size: 0.8rem;
-        font-style: italic;
-        color: #6f7688;
+      .cursor {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: var(--gold);
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      :focus-visible {
-        outline: 2px solid var(--blue-accent);
-        outline-offset: 2px;
+      .cursor.active {
+        transform: translate(-50%, -50%) scale(2.5);
       }
 
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
+      .grain {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 1;
+        mix-blend-mode: overlay;
       }
 
-      .scroll-progress {
+      .progress-wrap {
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        height: 3px;
+        width: 100%;
+        height: 2px;
         z-index: 9999;
-        background: transparent;
+        pointer-events: none;
       }
 
-      .scroll-progress-bar {
+      .progress-bar {
         height: 100%;
         width: 100%;
-        background: var(--blue-accent);
+        background: var(--gold);
         transform-origin: left center;
         transform: scaleX(0);
       }
 
-      .site-header {
+      .intro-overlay {
         position: fixed;
-        inset: 0 0 auto 0;
-        z-index: 120;
-        transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .site-header.scrolled {
-        background: rgba(255, 255, 255, 0.85);
-        border-bottom: 1px solid var(--border);
-        backdrop-filter: blur(8px);
-        box-shadow: 0 8px 18px rgba(13, 43, 85, 0.08);
-      }
-
-      .nav-wrap {
-        height: 74px;
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .logo {
-        font-size: 1.4rem;
-        font-weight: 800;
-      }
-
-      .desktop-nav,
-      .desktop-cta {
-        display: none;
-      }
-
-      .menu-toggle {
-        margin-left: auto;
-        width: 42px;
-        height: 42px;
-        border: 1px solid var(--border);
-        border-radius: var(--radius-btn);
-        background: var(--white);
+        inset: 0;
+        background: var(--black);
         display: grid;
         place-items: center;
-        cursor: pointer;
+        z-index: 10001;
+        opacity: 1;
+        transition: opacity 1.2s cubic-bezier(0.76, 0, 0.24, 1);
       }
 
-      .menu-toggle span {
-        width: 18px;
-        height: 2px;
-        background: var(--blue-deep);
-        display: block;
-        position: relative;
-        transition: transform 0.25s ease, background-color 0.25s ease;
-      }
-
-      .menu-toggle span::before,
-      .menu-toggle span::after {
-        content: "";
-        position: absolute;
-        width: 18px;
-        height: 2px;
-        background: var(--blue-deep);
-        left: 0;
-        transition: transform 0.25s ease, top 0.25s ease;
-      }
-
-      .menu-toggle span::before {
-        top: -6px;
-      }
-
-      .menu-toggle span::after {
-        top: 6px;
-      }
-
-      .menu-toggle.active span {
-        background: transparent;
-      }
-
-      .menu-toggle.active span::before {
-        top: 0;
-        transform: rotate(45deg);
-      }
-
-      .menu-toggle.active span::after {
-        top: 0;
-        transform: rotate(-45deg);
-      }
-
-      .mobile-menu {
-        position: fixed;
-        inset: 0;
-        background: rgba(13, 43, 85, 0.95);
-        display: grid;
-        place-content: center;
-        text-align: center;
-        gap: 1.2rem;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-        z-index: 110;
-      }
-
-      .mobile-menu.open {
-        transform: translateY(0);
-      }
-
-      .mobile-menu a {
-        color: var(--white);
-        font-family: "Syne", sans-serif;
-        font-size: 1.35rem;
-      }
-
-      .hero {
-        padding-top: 120px;
-        background: radial-gradient(circle at 1px 1px, var(--bg-light) 1px, transparent 0);
-        background-size: 18px 18px;
-        position: relative;
-        overflow: hidden;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-mesh {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
+      .intro-overlay.hide {
+        opacity: 0;
         pointer-events: none;
       }
 
-      .hero-blob {
-        position: absolute;
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        opacity: 0.15;
-        filter: blur(80px);
+      .intro-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--white);
+        letter-spacing: 0.06em;
       }
 
-      .hero-blob.one {
-        background: var(--blue-accent);
-        top: 5%;
-        left: -8%;
-        animation: driftA 9s infinite ease-in-out;
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      .hero-blob.two {
-        background: #9ec2ff;
-        bottom: 10%;
-        right: -6%;
-        animation: driftB 11s infinite ease-in-out;
+      .site-header.scrolled {
+        background: var(--overlay-dark);
+        backdrop-filter: blur(20px);
       }
 
-      .hero-blob.three {
-        background: var(--white);
-        top: 40%;
-        left: 45%;
-        animation: driftC 10s infinite ease-in-out;
+      .nav-row {
+        height: 78px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 24px;
       }
 
-      @keyframes driftA {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        50% {
-          transform: translate(40px, -25px);
-        }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
       }
 
-      @keyframes driftB {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        50% {
-          transform: translate(-35px, 20px);
-        }
+      .brand-monogram {
+        color: var(--gold);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        font-weight: 600;
       }
 
-      @keyframes driftC {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        50% {
-          transform: translate(20px, -20px);
-        }
+      .brand-name {
+        color: var(--white);
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.85rem;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
 
-      .hero .container {
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 26px;
+      }
+
+      .nav-links a {
+        color: var(--white-muted);
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .nav-links a:hover {
+        color: var(--white);
+      }
+
+      .nav-cta {
+        padding: 10px 24px;
+        font-size: 0.75rem;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
         position: relative;
-        z-index: 1;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse 60% 50% at 50% 50%, var(--gold-glow-04) 0%, var(--transparent) 70%),
+          repeating-linear-gradient(135deg, var(--grid-line) 0 1px, var(--transparent) 1px 60px),
+          var(--black);
+        padding-top: 100px;
       }
 
       .hero-grid {
         display: grid;
-        gap: 2rem;
-      }
-
-      .hero-kicker {
-        display: inline-flex;
+        grid-template-columns: 58% 42%;
+        gap: 32px;
         align-items: center;
-        margin-bottom: 14px;
-        border: 1px solid rgba(26, 92, 255, 0.2);
-        background: rgba(26, 92, 255, 0.08);
-        color: var(--blue-accent);
-        padding: 0.35rem 0.7rem;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        font-weight: 600;
       }
 
-      .hero-highlight {
-        color: var(--blue-accent);
+      .hero-text .overline {
+        opacity: 0;
+        transform: translateX(-36px);
+        animation: enterFromLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
       }
 
-      .hero-copy p {
-        margin-top: 20px;
-        max-width: 640px;
+      @keyframes enterFromLeft {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
 
-      .hero-trust-badges {
-        margin-top: 18px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-        color: var(--blue-deep);
-        font-size: 0.92rem;
-        font-weight: 500;
+      .hero-title {
+        margin-top: 8px;
       }
 
-      .hero-trust-badges span {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
+      .hero-line {
+        overflow: hidden;
+        display: block;
       }
 
-      .hero-trust-badges svg {
-        width: 16px;
-        height: 16px;
-        color: #10b981;
+      .hero-word {
+        display: inline-block;
+        transform: translateY(100%);
+        animation: wordUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .hero-word.gold {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      @keyframes wordUp {
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      .hero-subtitle {
+        max-width: 440px;
+        margin-top: 24px;
+        opacity: 0;
+        animation: fadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
       }
 
       .hero-actions {
-        margin-top: 28px;
         display: flex;
+        gap: 16px;
+        margin-top: 48px;
         flex-wrap: wrap;
-        gap: 0.85rem;
       }
 
-      .micro-stats {
-        margin-top: 20px;
-        font-size: 0.96rem;
-        font-weight: 500;
-        color: var(--blue-deep);
+      .hero-stats {
+        margin-top: 64px;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero-stats .divider {
+        color: var(--white-line);
       }
 
       .hero-visual {
         position: relative;
-        min-height: 420px;
-        width: min(100%, 420px);
-        margin: 0 auto;
       }
 
-      .stack-card {
-        position: absolute;
-        width: min(92%, 360px);
-        background: var(--white);
-        border: 1px solid #d7def0;
-        border-radius: 12px;
-        box-shadow: 0 20px 42px rgba(13, 43, 85, 0.16);
-        padding: 20px;
-        left: 50%;
-        top: 50%;
-        transform-origin: center center;
-      }
-
-      .stack-card h3 {
-        font-size: 1rem;
-        margin-bottom: 10px;
-      }
-
-      .bar {
-        height: 10px;
-        background: var(--bg-light);
-        border-radius: 999px;
-        margin-top: 10px;
+      .editor-card {
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--surface);
+        aspect-ratio: 3 / 4;
         overflow: hidden;
+        transform: rotate(-2deg) translateY(0);
+        box-shadow: 0 40px 120px var(--shadow-deep);
+        position: relative;
+        animation: floatCard 5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
       }
 
-      .bar span {
-        display: block;
-        height: 100%;
-        border-radius: inherit;
-        background: linear-gradient(90deg, #97b7ff, var(--blue-accent));
+      @keyframes floatCard {
+        from {
+          transform: rotate(-2deg) translateY(0);
+        }
+        to {
+          transform: rotate(-2deg) translateY(-12px);
+        }
       }
 
-      .stack-1 {
-        transform: translate(-60%, -46%) rotate(-3deg);
-        z-index: 1;
+      .editor-top {
+        height: 32px;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-2);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 12px;
       }
 
-      .stack-2 {
-        transform: translate(-50%, -50%) rotate(0deg);
-        z-index: 2;
+      .dots {
+        display: flex;
+        gap: 6px;
       }
 
-      .stack-3 {
-        transform: translate(-40%, -54%) rotate(2deg);
-        z-index: 3;
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid var(--white-dim);
+        background: var(--surface);
       }
 
-      .metric-badge {
-        position: absolute;
-        bottom: 18px;
-        right: 0;
-        background: #10b981;
-        color: var(--white);
+      .fake-url {
+        margin-left: auto;
+        margin-right: auto;
+        width: 62%;
+        height: 16px;
         border-radius: 999px;
-        padding: 0.48rem 0.85rem;
-        font-size: 0.87rem;
-        font-weight: 700;
-        z-index: 4;
+        background: var(--white-dim);
+        color: var(--white-muted);
+        font-size: 0.55rem;
+        letter-spacing: 0.08em;
+        text-align: center;
+        line-height: 16px;
       }
 
-      .numbers-bar {
-        background: var(--blue-accent);
-        color: var(--white);
-        padding: 28px 0;
+      .editor-content {
+        padding: 24px;
+        position: relative;
+      }
+
+      .block-hero {
+        height: 120px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      }
+
+      .line {
+        height: 12px;
+        border-radius: 2px;
+        background: var(--white-dim);
+        margin-top: 10px;
+      }
+
+      .line.s1 { width: 80%; }
+      .line.s2 { width: 60%; }
+      .line.s3 { width: 95%; height: 8px; }
+      .line.s4 { width: 88%; height: 8px; }
+      .line.s5 { width: 72%; height: 8px; }
+
+      .gold-line {
+        height: 1px;
+        width: 100%;
+        background: var(--gold);
+        margin-top: 18px;
+        margin-bottom: 16px;
+      }
+
+      .mini-btn {
+        width: 110px;
+        height: 24px;
+        background: var(--gold);
+        border-radius: 2px;
+        margin-top: 20px;
+      }
+
+      .work-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--gold);
+        color: var(--black);
+        padding: 6px 12px;
+        border-radius: 2px;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .scanlines {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          180deg,
+          var(--transparent) 0 2px,
+          var(--overlay-scan) 2px 4px
+        );
+      }
+
+      .numbers {
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 56px 0;
       }
 
       .numbers-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        text-align: center;
+        grid-template-columns: repeat(4, 1fr);
       }
 
-      .numbers-value {
-        font-family: "Syne", sans-serif;
-        font-size: 2.8rem;
+      .metric {
+        padding: 0 24px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+
+      .metric:last-child {
+        border-right: none;
+      }
+
+      .metric-value {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        font-weight: 300;
         line-height: 1;
-        font-weight: 700;
+        color: var(--gold);
       }
 
-      .numbers-label {
+      .metric-label {
         margin-top: 8px;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
       }
 
-      .proof-bar {
-        background: var(--blue-deep);
-        color: var(--white);
-        padding: 28px 0;
-      }
-
-      .proof-content {
-        display: grid;
-        gap: 1rem;
-        text-align: center;
-      }
-
-      .proof-logos {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        justify-content: center;
-      }
-
-      .proof-logos span {
-        font-family: "Syne", sans-serif;
-        font-size: 1.1rem;
-        font-weight: 700;
-        opacity: 0.7;
-        padding: 0.25rem 0.45rem;
-      }
-
-      .problem-grid,
-      .why-grid,
-      .testimonials-grid {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .problem-card {
-        border-top: 3px solid var(--blue-accent);
-        padding: 24px;
-        position: relative;
+      .proof {
+        background: var(--black-soft);
+        padding: 40px 0;
         overflow: hidden;
       }
 
-      .problem-card:hover {
-        box-shadow: inset 0 0 0 1px var(--blue-accent), 0 8px 32px rgba(26, 92, 255, 0.1);
-      }
-
-      .problem-card svg,
-      .why-card svg,
-      .method-step svg,
-      .sector-card svg {
-        width: 28px;
-        height: 28px;
-        color: var(--blue-accent);
-        margin-bottom: 12px;
-      }
-
-      .problem-card h3,
-      .method-step h3,
-      .why-card h3,
-      .sector-card h3,
-      .testimonial-card h3 {
-        font-size: 1.16rem;
-        margin-bottom: 8px;
-      }
-
-      .problem-stat {
+      .proof-head {
         text-align: center;
-        max-width: 900px;
-        margin: 0 auto 30px;
+        margin-bottom: 24px;
       }
 
-      .problem-stat p {
-        font-family: "Syne", sans-serif;
-        font-size: clamp(1.3rem, 2.8vw, 2rem);
-        line-height: 1.25;
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 20s linear infinite;
       }
 
-      .problem-stat strong {
-        display: inline-block;
-        font-size: clamp(3rem, 6vw, 5rem);
-        color: var(--blue-accent);
-        line-height: 1;
-        margin-right: 0.3rem;
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .marquee-group {
+        display: flex;
+        gap: 48px;
+        padding-right: 48px;
+      }
+
+      .brand-pill {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        color: var(--white-dim);
+        transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .brand-pill:hover {
+        color: var(--white-muted);
+      }
+
+      .left-intro {
+        max-width: 760px;
+      }
+
+      .problem-watermark {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(6rem, 12vw, 11rem);
+        color: var(--gold-glow-08);
+        line-height: 0.9;
+        margin-top: 30px;
+      }
+
+      .problem-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: baseline;
+        margin-top: 8px;
+      }
+
+      .problem-row strong {
+        color: var(--white);
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 3vw, 3rem);
+        font-weight: 300;
       }
 
       .problem-source {
-        margin-top: 8px;
-        font-size: 0.8rem;
-        color: #6f7688;
-      }
-
-      .problem-no {
-        position: absolute;
-        top: 6px;
-        left: 12px;
-        font-family: "Syne", sans-serif;
-        font-size: 3rem;
-        font-weight: 800;
-        opacity: 0.15;
-        color: var(--blue-accent);
-        line-height: 1;
-        pointer-events: none;
-      }
-
-      .method-timeline {
-        display: grid;
-        gap: 1rem;
-        position: relative;
-        border-left: 2px dashed #b9ccff;
-        padding-left: 20px;
-      }
-
-      .method-step {
-        position: relative;
-        padding: 22px;
-        overflow: hidden;
-      }
-
-      .step-number {
-        position: absolute;
-        top: -8px;
-        right: 10px;
-        font-size: 8rem;
-        line-height: 1;
-        font-weight: 700;
-        color: rgba(26, 92, 255, 0.06);
-        font-family: "Syne", sans-serif;
-        pointer-events: none;
-      }
-
-      .method-step-tag {
-        display: inline-flex;
-        margin-bottom: 10px;
-        border-radius: 999px;
-        padding: 0.24rem 0.7rem;
+        margin-top: 10px;
         font-size: 0.78rem;
-        font-weight: 700;
-        color: var(--white);
+        color: var(--white-dim);
       }
 
-      .method-step-tag.green {
-        background: #10b981;
+      .problem-cards {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
       }
 
-      .method-step-tag.orange {
-        background: #f59e0b;
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 40px 32px;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      .method-step-tag.blue {
-        background: var(--blue-accent);
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--gold-border-30);
+      }
+
+      .card-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        color: var(--gold);
+        opacity: 0.4;
+        line-height: 1;
+      }
+
+      .card h3 {
+        margin-top: 16px;
+      }
+
+      .card p {
+        margin-top: 14px;
+      }
+
+      .card-accent {
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        margin-top: 24px;
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .card:hover .card-accent {
+        width: 32px;
+      }
+
+      .method {
+        background: var(--surface);
+      }
+
+      .method-head {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 56px;
+      }
+
+      .method-row {
+        min-height: 120px;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        border-bottom: 1px solid var(--border);
+        padding: 40px 0;
+        transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .method-row:first-child {
+        border-top: 1px solid var(--border);
+      }
+
+      .method-row:hover {
+        background: var(--surface-2);
+      }
+
+      .method-no {
+        width: 20%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(5rem, 8vw, 7rem);
+        line-height: 1;
+        color: var(--border);
+        transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .method-row:hover .method-no {
+        color: var(--gold-glow-15);
+      }
+
+      .method-tag {
+        width: 15%;
+        margin-top: 8px;
+      }
+
+      .method-tag span {
+        display: inline-flex;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        padding: 4px 12px;
+        border-radius: 2px;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 500;
+      }
+
+      .method-title {
+        width: 40%;
+      }
+
+      .method-copy {
+        width: 25%;
+        font-size: 0.88rem;
       }
 
       .sectors-grid {
+        margin-top: 42px;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.8rem;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1px;
+        background: var(--border);
       }
 
-      .sector-card {
-        border: 1px solid var(--border);
-        border-radius: var(--radius-card);
-        background: var(--white);
-        padding: 14px;
-        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      .sector-cell {
+        background: var(--black);
+        padding: 32px 24px;
+        transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      .sector-card:hover {
-        transform: translateY(-4px) scale(1.02);
-        border-color: var(--blue-accent);
-        box-shadow: inset 0 0 0 1px var(--blue-accent), 0 8px 32px rgba(26, 92, 255, 0.1);
+      .sector-name {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 500;
+        color: var(--white-muted);
       }
 
-      .sector-card h3 {
-        font-size: 1rem;
-        line-height: 1.3;
-      }
-
-      .why-card {
-        padding: 24px;
-      }
-
-      .comparison-wrap {
-        overflow-x: auto;
-      }
-
-      .comparison-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 1fr 1fr;
-        min-width: 760px;
-        gap: 0.8rem;
-      }
-
-      .comparison-cell {
-        border-radius: 10px;
-        padding: 12px 14px;
-      }
-
-      .comparison-cell.label {
-        font-weight: 600;
-        color: var(--blue-deep);
-      }
-
-      .comparison-cell.landcore {
-        background: var(--white);
-        border-top: 3px solid var(--blue-accent);
-        box-shadow: var(--shadow-soft);
-      }
-
-      .comparison-cell.traditional {
-        background: #fff5f5;
-        color: #7d7d89;
-      }
-
-      .comparison-head {
-        font-family: "Syne", sans-serif;
-        font-size: 1.1rem;
-        color: var(--blue-deep);
-      }
-
-      .comparison-item {
-        display: flex;
-        align-items: center;
-        gap: 0.45rem;
-      }
-
-      .comparison-item svg {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-      }
-
-      .comparison-item.ok svg {
-        color: #10b981;
-      }
-
-      .comparison-item.no svg {
-        color: #ef4444;
-      }
-
-      .testimonial-card {
-        padding: 26px;
-        border-radius: 12px;
-      }
-
-      .testimonial-stars {
-        display: flex;
-        gap: 0.2rem;
-        margin-bottom: 8px;
-      }
-
-      .testimonial-stars svg {
-        width: 16px;
-        height: 16px;
-        color: #f6b700;
-      }
-
-      .quote-mark {
-        font-family: "Syne", sans-serif;
-        font-size: 4rem;
-        line-height: 0.9;
-        color: var(--blue-accent);
-      }
-
-      .testimonial-text {
-        font-style: italic;
+      .sector-desc {
         margin-top: 8px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--white-dim);
       }
 
-      .testimonial-meta {
-        margin-top: 18px;
+      .sector-line {
+        margin-top: 16px;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .sector-cell:hover {
+        background: var(--surface);
+      }
+
+      .sector-cell:hover .sector-name {
+        color: var(--white);
+      }
+
+      .sector-cell:hover .sector-line {
+        width: 100%;
+      }
+
+      .why {
+        background: var(--surface);
+      }
+
+      .center-head {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 56px;
+      }
+
+      .why-row {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border);
+        padding: 36px 0;
+        transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border-left: 2px solid var(--transparent);
+      }
+
+      .why-row:first-child {
+        border-top: 1px solid var(--border);
+      }
+
+      .why-row:hover {
+        background: var(--surface-2);
+        border-left: 2px solid var(--gold);
+      }
+
+      .why-no {
+        width: 15%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(5rem, 8vw, 8rem);
+        color: var(--border);
+        line-height: 1;
+      }
+
+      .why-title {
+        width: 35%;
+      }
+
+      .why-desc {
+        width: 50%;
+      }
+
+      .testimonials {
+        background: var(--black);
+      }
+
+      .test-grid {
+        margin-top: 42px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      .test-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 48px 40px;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .test-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--gold-border-25);
+      }
+
+      .stars {
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+      }
+
+      .quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 5rem;
+        line-height: 0.8;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .test-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        color: var(--white);
+        font-style: italic;
+        line-height: 1.7;
+      }
+
+      .test-meta {
+        margin-top: 24px;
+        border-top: 1px solid var(--border);
+        padding-top: 20px;
         display: flex;
         align-items: center;
-        gap: 0.8rem;
+        gap: 12px;
       }
 
       .avatar {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--surface-2);
+        color: var(--gold);
         display: grid;
         place-items: center;
-        background: #dce7ff;
-        color: var(--blue-deep);
-        font-weight: 700;
+        font-family: "Cormorant Garamond", serif;
         font-size: 0.9rem;
       }
 
       .meta-name {
-        font-weight: 700;
-        color: var(--blue-deep);
+        color: var(--white);
+        font-size: 0.85rem;
+        font-weight: 500;
       }
 
       .meta-role {
-        color: #677086;
-        font-size: 0.92rem;
+        color: var(--white-muted);
+        font-size: 0.78rem;
       }
 
-      .meta-result {
-        color: var(--blue-accent);
+      .result-tag {
+        margin-left: auto;
+        border: 1px solid var(--gold-border-30);
+        color: var(--gold);
+        padding: 4px 10px;
+        border-radius: 2px;
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .compare {
+        background: var(--surface);
+      }
+
+      .compare-grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+      .compare-cell {
+        padding: 16px 14px;
+        border-bottom: 1px solid var(--border);
         font-size: 0.9rem;
-        font-weight: 700;
       }
 
-      .testimonials-rating {
-        text-align: center;
-        margin-top: 18px;
-        color: #6f7688;
-        font-size: 0.95rem;
+      .compare-head {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
       }
 
-      .testimonials-rating .stars {
-        color: #f6b700;
-        letter-spacing: 0.05rem;
+      .compare-head.lc {
+        color: var(--gold);
+      }
+
+      .compare-head.alt {
+        color: var(--white-muted);
+      }
+
+      .compare-cell.label {
+        color: var(--white-muted);
+      }
+
+      .compare-cell.lc {
+        color: var(--white);
+        border-left: 1px solid var(--gold-border-20);
+        border-right: 1px solid var(--gold-border-20);
+        background: var(--gold-glow-03);
+      }
+
+      .compare-cell.alt {
+        color: var(--white-muted);
+      }
+
+      .pill-reco {
+        display: inline-flex;
+        margin-bottom: 8px;
+        background: var(--gold);
+        color: var(--black);
+        padding: 2px 8px;
+        border-radius: 2px;
+        font-size: 0.6rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .mark-ok {
+        color: var(--ok);
+        margin-right: 6px;
+      }
+
+      .mark-no {
+        color: var(--bad);
+        margin-right: 6px;
+      }
+
+      .faq {
+        background: var(--black);
+      }
+
+      .faq-contact {
+        margin-top: 8px;
+        font-size: 0.85rem;
+      }
+
+      .faq-contact a {
+        color: var(--gold);
+        font-weight: 500;
       }
 
       .faq-list {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .faq-lead {
-        text-align: center;
-        margin: 0 auto 16px;
-      }
-
-      .faq-lead a {
-        color: var(--blue-accent);
-        font-weight: 700;
+        margin-top: 28px;
       }
 
       .faq-item {
-        border-bottom: 1px solid #d7deeb;
-        transition: background-color 0.25s ease;
+        border-bottom: 1px solid var(--border);
+        padding: 28px 0;
       }
 
-      .faq-item.open {
-        background: rgba(26, 92, 255, 0.04);
-      }
-
-      .faq-question {
+      .faq-btn {
         width: 100%;
         background: none;
         border: 0;
-        padding: 18px 8px;
+        color: var(--white);
         text-align: left;
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
-        font: inherit;
-        font-weight: 600;
-        color: var(--blue-deep);
+        gap: 16px;
+        align-items: flex-start;
         cursor: pointer;
+        padding: 0;
       }
 
-      .chevron {
-        width: 20px;
-        height: 20px;
-        transition: transform 0.25s ease;
-        flex-shrink: 0;
+      .faq-q {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+        font-weight: 400;
+        transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      .faq-item.open .chevron {
-        transform: rotate(180deg);
+      .faq-toggle {
+        color: var(--gold);
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1;
       }
 
       .faq-answer {
         max-height: 0;
+        opacity: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
-        padding: 0 8px;
-      }
-
-      .faq-answer p {
-        padding-bottom: 16px;
-      }
-
-      .cta-final {
-        background: var(--blue-deep);
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M0 80 L80 0 M-20 60 L20 20 M60 100 L100 60' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/svg%3E");
-        color: var(--white);
-        text-align: center;
-        padding: 120px 0;
-      }
-
-      .cta-final h2,
-      .cta-final p {
-        color: var(--white);
-      }
-
-      .cta-final p {
-        margin: 12px auto 0;
-        max-width: 760px;
-      }
-
-      .cta-final .btn {
-        margin-top: 26px;
-      }
-
-      .cta-note {
-        margin-top: 14px;
-        font-size: 0.93rem;
-        opacity: 0.95;
-      }
-
-      .cta-final .trust-line {
-        color: rgba(255, 255, 255, 0.82);
-      }
-
-      .cta-assurances {
-        margin-top: 18px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        color: rgba(255, 255, 255, 0.88);
+        transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         font-size: 0.9rem;
       }
 
-      .cta-assurances span {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
+      .faq-answer p {
+        margin-top: 14px;
       }
 
-      .cta-assurances svg {
-        width: 16px;
-        height: 16px;
+      .faq-item.open .faq-q {
+        color: var(--gold);
       }
 
-      .pulse-cta-light {
-        animation: ctaPulseLight 2s infinite;
+      .faq-item.open .faq-answer {
+        opacity: 1;
       }
 
-      @keyframes ctaPulseLight {
-        0% {
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-        }
-        70% {
-          box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-        }
+      .final-cta {
+        background:
+          radial-gradient(ellipse 50% 40% at 50% 50%, var(--gold-glow-06) 0%, var(--transparent) 70%),
+          var(--surface);
+        text-align: center;
+        padding: 160px 0;
+      }
+
+      .final-cta h2 span {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      .final-body {
+        max-width: 500px;
+        margin: 32px auto;
+      }
+
+      .trust-row {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+      }
+
+      .trust-row .sep {
+        color: var(--border);
       }
 
       .footer {
-        background: #0a0a0a;
-        color: #f1f1f1;
+        background: var(--black);
+        border-top: 1px solid var(--border);
+        padding: 64px 0 40px;
       }
 
-      .footer-grid {
-        padding: 46px 0 28px;
-        display: grid;
-        gap: 1.3rem;
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
       }
 
-      .footer-logo {
+      .footer-tag {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        color: var(--white-dim);
+        font-style: italic;
+        max-width: 260px;
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-nav a {
+        font-size: 0.8rem;
+        color: var(--white-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .footer-nav a:hover {
         color: var(--white);
       }
 
-      .footer-muted {
-        color: #b8b8b8;
+      .social-row {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
       }
 
-      .footer a:hover {
-        color: var(--white);
+      .social-row a {
+        color: var(--white-dim);
+        transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .social-row a:hover {
+        color: var(--gold);
+      }
+
+      .social-row svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .footer-mail {
+        color: var(--gold);
+        font-size: 0.85rem;
       }
 
       .footer-bottom {
-        border-top: 1px solid #1f1f1f;
-        padding: 14px 0 20px;
-        font-size: 0.88rem;
-        color: #b8b8b8;
-      }
-
-      .footer-social {
-        margin-top: 12px;
+        margin-top: 26px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
         display: flex;
-        gap: 0.75rem;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 0.72rem;
+        color: var(--white-dim);
+        letter-spacing: 0.06em;
       }
 
-      .footer-social a {
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      .footer-social a:hover {
-        color: rgba(255, 255, 255, 1);
-      }
-
-      .footer-social svg {
-        width: 18px;
-        height: 18px;
-      }
-
-      .mobile-sticky-cta {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 60px;
-        background: var(--blue-accent);
-        z-index: 140;
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-      }
-
-      .mobile-sticky-cta.show {
-        transform: translateY(0);
-      }
-
-      .mobile-sticky-cta a {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        font-weight: 700;
-      }
-
-      .back-to-top {
-        position: fixed;
-        width: 48px;
-        height: 48px;
-        border-radius: 8px;
-        border: 0;
-        right: 18px;
-        bottom: 78px;
-        background: var(--blue-deep);
-        color: var(--white);
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(14px);
-        transition: opacity 0.2s ease, transform 0.2s ease;
-        z-index: 150;
-      }
-
-      .back-to-top.show {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-      }
-
-      .back-to-top:hover {
-        transform: scale(1.05);
+      .mobile-sticky {
+        display: none;
       }
 
       .exit-modal {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.62);
+        background: var(--overlay-modal);
+        backdrop-filter: blur(8px);
         display: grid;
         place-items: center;
+        z-index: 2000;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.2s ease;
-        z-index: 200;
-        padding: 1rem;
+        transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 24px;
       }
 
       .exit-modal.open {
@@ -1157,176 +1261,256 @@
 
       .exit-card {
         width: min(100%, 520px);
-        background: var(--white);
-        border-radius: 12px;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.2);
-        padding: 24px;
-        text-align: center;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 56px 48px;
+        position: relative;
+      }
+
+      .exit-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: none;
+        border: 0;
+        color: var(--white-muted);
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .exit-close:hover {
+        color: var(--white);
       }
 
       .exit-card h3 {
-        margin-bottom: 10px;
+        font-size: 2.2rem;
+        font-weight: 300;
       }
 
       .exit-card p {
-        margin-bottom: 18px;
-      }
-
-      .exit-close-link {
         margin-top: 12px;
+        margin-bottom: 24px;
+      }
+
+      .exit-link {
         display: inline-block;
-        color: #6f7688;
-        font-size: 0.92rem;
-        background: none;
-        border: 0;
-        cursor: pointer;
+        margin-top: 14px;
+        font-size: 0.8rem;
+        color: var(--white-dim);
+        text-decoration: underline;
       }
 
-      [data-animate] {
+      .reveal {
         opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.55s ease, transform 0.55s ease;
+        transform: translateY(40px);
+        transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      [data-animate].in-view {
+      .reveal.visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-      [data-stagger] > * {
+      .stagger > * {
         opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.55s ease, transform 0.55s ease;
+        transform: translateY(40px);
+        transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      [data-stagger].in-view > * {
+      .stagger.visible > * {
         opacity: 1;
         transform: translateY(0);
       }
 
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         .section {
-          padding: 100px 0;
+          padding: 80px 0;
         }
 
-        .desktop-nav {
-          display: flex;
-          justify-content: center;
-          gap: 1.3rem;
-        }
-
-        .desktop-nav a {
-          font-weight: 500;
-          color: var(--text-body);
-          transition: color 0.2s ease;
-          position: relative;
-        }
-
-        .desktop-nav a:hover {
-          color: var(--blue-accent);
-        }
-
-        .desktop-nav a + a {
-          padding-left: 1.1rem;
-        }
-
-        .desktop-nav a + a::before {
-          content: "·";
-          position: absolute;
-          left: 0.35rem;
-          color: #9aa3b8;
-        }
-
-        .desktop-cta {
-          display: inline-flex;
-        }
-
-        .menu-toggle,
-        .mobile-menu,
-        .mobile-sticky-cta {
+        .cursor,
+        .hero-visual {
           display: none;
         }
 
-        .hero-grid {
-          grid-template-columns: 1.2fr 0.8fr;
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          width: 40px;
+          height: 40px;
           align-items: center;
+          justify-content: center;
+          background: none;
+          border: 1px solid var(--border);
+          color: var(--white);
+          position: relative;
+          z-index: 1200;
         }
 
-        .numbers-grid {
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-
-        .proof-content {
-          grid-template-columns: auto 1fr;
-          align-items: center;
-          gap: 1.8rem;
-          text-align: left;
-        }
-
-        .proof-logos {
-          justify-content: flex-end;
-        }
-
-        .problem-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 1.2rem;
-        }
-
-        .method-timeline {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          border-left: 0;
-          padding-left: 0;
-          gap: 1.2rem;
-        }
-
-        .method-timeline::before {
-          content: "";
+        .menu-toggle span,
+        .menu-toggle span::before,
+        .menu-toggle span::after {
+          width: 18px;
+          height: 1px;
+          background: var(--white);
           position: absolute;
-          left: 8%;
-          right: 8%;
-          top: 46%;
-          border-top: 2px dashed #b9ccff;
-          transform: translateY(-50%);
-          z-index: 0;
+          content: "";
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .method-step {
-          z-index: 1;
+        .menu-toggle span::before { transform: translateY(-6px); }
+        .menu-toggle span::after { transform: translateY(6px); }
+
+        .menu-toggle.active span { background: var(--transparent); }
+        .menu-toggle.active span::before { transform: rotate(45deg); }
+        .menu-toggle.active span::after { transform: rotate(-45deg); }
+
+        .mobile-menu {
+          display: flex;
+          position: fixed;
+          inset: 0;
+          background: var(--menu-overlay);
+          z-index: 1100;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 18px;
+          transform: translateY(-100%);
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .mobile-menu.open {
+          transform: translateY(0);
+        }
+
+        .mobile-menu a {
+          font-family: "Cormorant Garamond", serif;
+          font-size: 2.5rem;
+          color: var(--white);
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        .mobile-menu.open a {
+          opacity: 1;
+          transform: translateY(0);
+          transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 120px;
+          padding-bottom: 80px;
+        }
+
+        .hero-grid,
+        .problem-cards,
+        .numbers-grid,
+        .test-grid,
+        .compare-grid,
+        .footer-top {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .hero-actions .btn,
+        .final-cta .btn {
+          width: 100%;
+        }
+
+        .hero-stats {
+          flex-wrap: wrap;
+        }
+
+        .metric {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+          padding: 20px 0;
+        }
+
+        .metric:last-child {
+          border-bottom: none;
+        }
+
+        .method-row,
+        .why-row {
+          display: block;
+        }
+
+        .method-no,
+        .why-no {
+          display: none;
+        }
+
+        .method-tag,
+        .method-title,
+        .method-copy,
+        .why-title,
+        .why-desc {
+          width: 100%;
+        }
+
+        .method-copy,
+        .why-desc {
+          margin-top: 12px;
         }
 
         .sectors-grid {
-          grid-template-columns: repeat(5, minmax(0, 1fr));
-          gap: 1rem;
+          grid-template-columns: repeat(2, 1fr);
         }
 
-        .why-grid,
-        .testimonials-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 1.2rem;
-        }
-
-        .comparison-grid {
-          grid-template-columns: 1.1fr 1fr 1fr;
-          gap: 0.9rem;
-        }
-
-        .comparison-grid .comparison-cell {
-          min-height: 68px;
+        .test-grid {
           display: flex;
-          align-items: center;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 16px;
+          padding-bottom: 10px;
         }
 
-        .testimonials-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+        .test-card {
+          min-width: 85vw;
+          scroll-snap-align: start;
         }
 
-        .footer-grid {
-          grid-template-columns: 1.2fr 1fr 1fr;
-          align-items: start;
+        .compare-grid {
+          overflow-x: auto;
+          grid-template-columns: 2fr 1fr 1fr;
+          min-width: 760px;
         }
 
-        .back-to-top {
-          bottom: 24px;
+        .mobile-sticky {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          background: var(--sticky-overlay);
+          border-top: 1px solid var(--border);
+          padding: 12px 24px;
+          text-align: center;
+          font-size: 0.8rem;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--gold);
+          font-weight: 500;
+          transform: translateY(120%);
+          transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+          z-index: 1300;
+        }
+
+        .mobile-sticky.show {
+          transform: translateY(0);
+        }
+      }
+
+      @media (hover: none) {
+        .cursor {
+          display: none;
         }
       }
     </style>
@@ -1337,7 +1521,7 @@
         "@type": "ProfessionalService",
         "name": "LandCore",
         "url": "https://landcore.it",
-        "description": "Agenzia italiana specializzata nella creazione di landing page personalizzate per PMI e professionisti. Analisi del settore, copywriting persuasivo e design su misura.",
+        "description": "Agenzia italiana specializzata nella creazione di landing page personalizzate.",
         "areaServed": "IT",
         "serviceType": "Landing Page Design su Misura",
         "priceRange": "€€",
@@ -1346,780 +1530,526 @@
     </script>
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+    <div class="intro-overlay" id="introOverlay"><div class="intro-logo">LandCore</div></div>
+    <div class="cursor" id="cursor"></div>
+    <canvas class="grain" id="grainCanvas"></canvas>
+    <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
 
     <header class="site-header" id="home">
-      <div class="container nav-wrap">
-        <a href="#home" class="logo">LandCore</a>
-        <nav class="desktop-nav" aria-label="Navigazione principale">
+      <div class="container nav-row">
+        <a href="#home" class="brand">
+          <span class="brand-monogram">LC</span>
+          <span class="brand-name">LandCore</span>
+        </a>
+        <nav class="nav-links">
           <a href="#metodo">Metodo</a>
           <a href="#settori">Settori</a>
           <a href="#perche-noi">Perch&eacute; noi</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a href="#cta" class="btn btn-primary pulse-cta desktop-cta interactive">Parliamo del tuo progetto &rarr;</a>
-        <button
-          class="menu-toggle"
-          aria-label="Apri menu navigazione"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          type="button"
-        >
-          <span></span>
-        </button>
+        <a href="#cta" class="btn nav-cta">Parliamo del tuo progetto &rarr;</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Apri menu" type="button"><span></span></button>
       </div>
     </header>
 
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu" id="mobileMenu">
       <a href="#metodo">Metodo</a>
       <a href="#settori">Settori</a>
       <a href="#perche-noi">Perch&eacute; noi</a>
       <a href="#faq">FAQ</a>
-      <a href="#cta" class="btn btn-white pulse-cta">Parliamo del tuo progetto &rarr;</a>
+      <a href="#cta">Parliamo del tuo progetto</a>
     </div>
 
     <main>
-      <section class="hero section" role="region" aria-labelledby="hero-title">
-        <div class="hero-mesh" aria-hidden="true">
-          <span class="hero-blob one"></span>
-          <span class="hero-blob two"></span>
-          <span class="hero-blob three"></span>
-        </div>
-
+      <section class="hero section">
         <div class="container hero-grid">
-          <div class="hero-copy" data-animate>
-            <p class="hero-kicker">🇮🇹 Design · Copy · Sviluppo · Immagini — tutto in una pagina</p>
-            <h1 id="hero-title">La tua Landing Page Dovrebbe Sembrare Fatta per Te. Perch&eacute; lo &Egrave;.</h1>
-            <p>
+          <div class="hero-text">
+            <p class="overline">🇮🇹 Design · Copy · Sviluppo · Immagini</p>
+            <h1 class="hero-title">
+              <span class="hero-line"><span class="hero-word" style="animation-delay:0.5s">La</span> <span class="hero-word" style="animation-delay:0.56s">tua</span> <span class="hero-word" style="animation-delay:0.62s">pagina</span></span>
+              <span class="hero-line"><span class="hero-word gold" style="animation-delay:0.68s">come</span> <span class="hero-word gold" style="animation-delay:0.74s">nessun'altra.</span></span>
+            </h1>
+            <p class="hero-subtitle">
               Ogni azienda ha una storia, un pubblico, un'estetica. Noi la studiamo, la capiamo e la traduciamo in una
               landing page costruita da zero - con design originale, testi su misura, sviluppo tecnico e immagini
               selezionate per il tuo settore. Niente template. Niente scorciatoie.
             </p>
-            <div class="hero-trust-badges">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-                Design 100% su misura
-              </span>
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-                Nessun template
-              </span>
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-                Consegna in 10 giorni lavorativi
-              </span>
-            </div>
             <div class="hero-actions">
-              <a href="#cta" class="btn btn-primary pulse-cta interactive">Raccontaci il tuo progetto</a>
-              <a href="#metodo" class="btn btn-outline interactive">Scopri come lavoriamo &rarr;</a>
+              <a href="#cta" class="btn btn-primary">Raccontaci il tuo progetto</a>
+              <a href="#metodo" class="btn btn-secondary">Scopri come lavoriamo &rarr;</a>
             </div>
-            <p class="trust-line">Oltre 120 aziende ci hanno gi&agrave; scelto</p>
-            <p class="micro-stats">120+ landing realizzate · 10 settori · Design, copy, sviluppo e immagini inclusi</p>
+            <div class="hero-stats">
+              <span>120+ Progetti</span><span class="divider">|</span>
+              <span>10 Settori</span><span class="divider">|</span>
+              <span>10gg Consegna</span>
+            </div>
           </div>
 
-          <div class="hero-visual" data-animate>
-            <article class="stack-card stack-1">
-              <h3>Headliner Settore</h3>
-              <div class="bar"><span style="width: 68%"></span></div>
-              <div class="bar"><span style="width: 81%"></span></div>
-              <div class="bar"><span style="width: 57%"></span></div>
-            </article>
-            <article class="stack-card stack-2">
-              <h3>Offerta e Prova Sociale</h3>
-              <div class="bar"><span style="width: 74%"></span></div>
-              <div class="bar"><span style="width: 66%"></span></div>
-              <div class="bar"><span style="width: 84%"></span></div>
-            </article>
-            <article class="stack-card stack-3">
-              <h3>CTA Strategica</h3>
-              <div class="bar"><span style="width: 89%"></span></div>
-              <div class="bar"><span style="width: 71%"></span></div>
-              <div class="bar"><span style="width: 63%"></span></div>
-            </article>
-            <div class="metric-badge">+ 120 progetti completati</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="numbers-bar" role="region" aria-labelledby="numbers-title">
-        <div class="container" data-animate>
-          <h2 id="numbers-title" class="sr-only">Numeri LandCore</h2>
-          <div class="numbers-grid" data-stagger>
-            <div>
-              <div class="numbers-value" data-counter="120" data-suffix="+">0</div>
-              <p class="numbers-label">Landing page realizzate</p>
-            </div>
-            <div>
-              <div class="numbers-value" data-counter="10">0</div>
-              <p class="numbers-label">Settori con design dedicato</p>
-            </div>
-            <div>
-              <div class="numbers-value" data-counter="100" data-suffix="%">0</div>
-              <p class="numbers-label">Progetti costruiti da zero</p>
-            </div>
-            <div>
-              <div class="numbers-value" data-counter="10" data-suffix="gg">0</div>
-              <p class="numbers-label">Tempo medio di consegna</p>
+          <div class="hero-visual">
+            <div class="editor-card">
+              <div class="editor-top">
+                <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                <div class="fake-url">landcore.it</div>
+              </div>
+              <div class="editor-content">
+                <div class="block-hero"></div>
+                <div class="line s1"></div>
+                <div class="line s2"></div>
+                <div class="gold-line"></div>
+                <div class="line s3"></div>
+                <div class="line s4"></div>
+                <div class="line s5"></div>
+                <div class="mini-btn"></div>
+                <div class="work-badge">In lavorazione...</div>
+              </div>
+              <div class="scanlines"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="proof-bar" role="region" aria-labelledby="proof-title">
-        <div class="container proof-content" data-animate>
-          <h2 id="proof-title" class="sr-only">Prova Sociale</h2>
-          <p>Professionisti e imprenditori italiani che hanno scelto un design che li rappresenta davvero.</p>
-          <div class="proof-logos" data-stagger>
-            <span>StudioRossi</span>
-            <span>MediClean</span>
-            <span>ArteCase</span>
-            <span>FitLab</span>
-            <span>LexGroup</span>
+      <hr class="section-divider" />
+
+      <section class="numbers" id="numbers">
+        <div class="container numbers-grid reveal" id="numbersGrid">
+          <div class="metric">
+            <div class="metric-value" data-counter="120" data-suffix="+">0</div>
+            <p class="metric-label">Landing page realizzate</p>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-counter="10">0</div>
+            <p class="metric-label">Settori con design dedicato</p>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-counter="100" data-suffix="%">0</div>
+            <p class="metric-label">Progetti costruiti da zero</p>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-counter="10" data-suffix="gg">0</div>
+            <p class="metric-label">Tempo medio di consegna</p>
           </div>
         </div>
       </section>
 
-      <section class="section bg-light" role="region" aria-labelledby="problema-title">
+      <hr class="section-divider" />
+
+      <section class="proof">
         <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="problema-title" class="section-title">Il problema non &egrave; avere una pagina. &Egrave; avere la pagina sbagliata.</h2>
-            <p>
-              Un template scaricato, un logo incollato sopra, e via. Il risultato? Una pagina che somiglia a quella di
-              tutti gli altri. E online, chi somiglia agli altri non viene scelto.
-            </p>
+          <p class="proof-head overline" style="display:block">Scelti da</p>
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <span class="brand-pill">StudioLex</span><span class="brand-pill">MediPlus</span><span class="brand-pill">CasaGroup</span><span class="brand-pill">FitPro</span><span class="brand-pill">ImpresaViva</span>
+            </div>
+            <div class="marquee-group">
+              <span class="brand-pill">StudioLex</span><span class="brand-pill">MediPlus</span><span class="brand-pill">CasaGroup</span><span class="brand-pill">FitPro</span><span class="brand-pill">ImpresaViva</span>
+            </div>
           </div>
-          <div class="problem-stat" data-animate>
-            <p><strong>9 su 10</strong> landing page italiane usano template standard non personalizzati sul settore n&eacute; sull'identit&agrave; del brand.</p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="section" id="problema">
+        <div class="container">
+          <div class="left-intro reveal">
+            <p class="overline">Il contesto</p>
+            <h2>Il problema non &egrave; avere una pagina. &Egrave; avere la pagina sbagliata.</h2>
+            <p style="margin-top:20px">Un template scaricato, un logo incollato sopra, e via. Il risultato? Una pagina che somiglia a quella di tutti gli altri. E online, chi somiglia agli altri non viene scelto.</p>
+            <div class="problem-watermark">9/10</div>
+            <div class="problem-row"><strong>9 su 10</strong><span>landing page italiane usano template standard non personalizzati sul settore n&eacute; sull'identit&agrave; del brand.</span></div>
             <p class="problem-source">Fonte: Analisi interna su 340 siti italiani — 2024</p>
           </div>
 
-          <div class="problem-grid" data-stagger>
-            <article class="problem-card card" data-animate>
-              <span class="problem-no">01</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="8" y="8" width="11" height="11" rx="2"></rect>
-                <rect x="5" y="5" width="11" height="11" rx="2"></rect>
-              </svg>
+          <div class="problem-cards stagger reveal">
+            <article class="card">
+              <div class="card-num">01</div>
               <h3>Template che non ti rappresentano.</h3>
               <p>Un dentista, un avvocato e un coach non possono avere la stessa pagina con colori diversi. Ogni settore ha un'estetica, un linguaggio visivo, un modo di trasmettere fiducia. I template non lo sanno. Noi s&igrave;.</p>
+              <div class="card-accent"></div>
             </article>
-
-            <article class="problem-card card" data-animate>
-              <span class="problem-no">02</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M20 15a3 3 0 0 1-3 3H9l-5 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3z"></path>
-                <path d="M12 8a2 2 0 0 1 2 2c0 1.5-2 2-2 3"></path>
-                <circle cx="12" cy="16" r="1"></circle>
-              </svg>
+            <article class="card">
+              <div class="card-num">02</div>
               <h3>Testi copiati che non parlano a nessuno.</h3>
-              <p>Frasi come \"qualit&agrave; e professionalit&agrave;\" o \"esperienza e competenza\" non dicono nulla di specifico su di te. Il tuo potenziale cliente legge e passa oltre. Un copy scritto su misura per il tuo settore e il tuo tono di voce fa una differenza visibile.</p>
+              <p>Frasi come "qualit&agrave; e professionalit&agrave;" o "esperienza e competenza" non dicono nulla di specifico su di te. Il tuo potenziale cliente legge e passa oltre. Un copy scritto su misura per il tuo settore e il tuo tono di voce fa una differenza visibile.</p>
+              <div class="card-accent"></div>
             </article>
-
-            <article class="problem-card card" data-animate>
-              <span class="problem-no">03</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="12" cy="12" r="8"></circle>
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M12 4V2M4 12H2M12 22v-2M22 12h-2"></path>
-              </svg>
+            <article class="card">
+              <div class="card-num">03</div>
               <h3>Immagini stock che chiunque riconosce.</h3>
               <p>Quella foto dell'uomo in giacca che stringe la mano - la hai gi&agrave; vista su 400 siti. Le immagini giuste raccontano la tua specifica realt&agrave;, il tuo ambiente, il tuo stile. Noi curiamo anche questo.</p>
+              <div class="card-accent"></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="metodo" role="region" aria-labelledby="metodo-title">
+      <hr class="section-divider" />
+
+      <section class="section method" id="metodo">
         <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="metodo-title" class="section-title">Quattro discipline. Un'unica pagina. La tua.</h2>
-            <p>La maggior parte delle agenzie esternalizza almeno una parte del lavoro. Noi gestiamo tutto internamente: design, copy, sviluppo e immagini nascono insieme, pensati come un sistema coerente.</p>
+          <div class="method-head reveal">
+            <p class="overline">Come lavoriamo</p>
+            <h2>Quattro discipline. Un'unica pagina. La tua.</h2>
+            <p style="margin-top:20px">La maggior parte delle agenzie esternalizza almeno una parte del lavoro. Noi gestiamo tutto internamente: design, copy, sviluppo e immagini nascono insieme, pensati come un sistema coerente.</p>
           </div>
 
-          <div class="method-timeline" data-stagger>
-            <article class="method-step card" data-animate>
-              <span class="step-number">01</span>
-              <span class="method-step-tag green">Fase 1 · Gratuita</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="11" cy="11" r="7"></circle>
-                <path d="M20 20l-3.5-3.5"></path>
-              </svg>
-              <h3>Ascoltiamo chi sei e chi vuoi raggiungere.</h3>
-              <p>
-                Prima di aprire Figma o scrivere una parola, vogliamo capire la tua azienda, il tuo settore, il tuo
-                pubblico e il tuo stile. Questa fase &egrave; gratuita e dura circa 45 minuti. &Egrave; il fondamento su cui
-                costruiamo tutto il resto.
-              </p>
+          <div class="reveal">
+            <article class="method-row">
+              <div class="method-no">01</div>
+              <div class="method-tag"><span>Fase 1 · Gratuita</span></div>
+              <h3 class="method-title">Ascoltiamo chi sei e chi vuoi raggiungere.</h3>
+              <p class="method-copy">Prima di aprire Figma o scrivere una parola, vogliamo capire la tua azienda, il tuo settore, il tuo pubblico e il tuo stile. Questa fase &egrave; gratuita e dura circa 45 minuti. &Egrave; il fondamento su cui costruiamo tutto il resto.</p>
             </article>
-
-            <article class="method-step card" data-animate>
-              <span class="step-number">02</span>
-              <span class="method-step-tag orange">Fase 2 · Design &amp; Copy</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 20h16"></path>
-                <path d="M5 16l5-5 3 3 6-6"></path>
-              </svg>
-              <h3>Progettiamo l'identit&agrave; visiva e il messaggio.</h3>
-              <p>
-                Il design e i testi nascono in parallelo, non in sequenza. Il layout segue il messaggio, i colori
-                riflettono il settore, la tipografia comunica il tono di voce. Ogni scelta grafica ha una ragione
-                precisa legata a chi sei e a chi parli.
-              </p>
+            <article class="method-row">
+              <div class="method-no">02</div>
+              <div class="method-tag"><span>Fase 2 · Design &amp; Copy</span></div>
+              <h3 class="method-title">Progettiamo l'identit&agrave; visiva e il messaggio.</h3>
+              <p class="method-copy">Il design e i testi nascono in parallelo, non in sequenza. Il layout segue il messaggio, i colori riflettono il settore, la tipografia comunica il tono di voce. Ogni scelta grafica ha una ragione precisa legata a chi sei e a chi parli.</p>
             </article>
-
-            <article class="method-step card" data-animate>
-              <span class="step-number">03</span>
-              <span class="method-step-tag blue">Fase 3 · Sviluppo</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                <path d="M8 8h8M8 12h8M8 16h5"></path>
-              </svg>
-              <h3>Sviluppiamo e curiamo ogni dettaglio tecnico.</h3>
-              <p>
-                Codice pulito, caricamento veloce, perfetta su ogni dispositivo. Gestiamo anche dominio, hosting e setup
-                tecnico se necessario. Consegniamo una pagina pronta, non un file da passare ad altri.
-              </p>
+            <article class="method-row">
+              <div class="method-no">03</div>
+              <div class="method-tag"><span>Fase 3 · Sviluppo</span></div>
+              <h3 class="method-title">Sviluppiamo e curiamo ogni dettaglio tecnico.</h3>
+              <p class="method-copy">Codice pulito, caricamento veloce, perfetta su ogni dispositivo. Gestiamo anche dominio, hosting e setup tecnico se necessario. Consegniamo una pagina pronta, non un file da passare ad altri.</p>
             </article>
-            <article class="method-step card" data-animate>
-              <span class="step-number">04</span>
-              <span class="method-step-tag blue">Fase 4 · Consegna in 10gg</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 12l5 5 11-11"></path>
-              </svg>
-              <h3>Consegniamo. Rifiniti insieme.</h3>
-              <p>
-                Presentiamo il lavoro completo con una call dedicata. Ascoltiamo il tuo feedback e rifiniamo fino a quando
-                non sei soddisfatto di come la pagina ti rappresenta. La pagina &egrave; tua in ogni suo elemento.
-              </p>
+            <article class="method-row">
+              <div class="method-no">04</div>
+              <div class="method-tag"><span>Fase 4 · Consegna in 10gg</span></div>
+              <h3 class="method-title">Consegniamo. Rifiniti insieme.</h3>
+              <p class="method-copy">Presentiamo il lavoro completo con una call dedicata. Ascoltiamo il tuo feedback e rifiniamo fino a quando non sei soddisfatto di come la pagina ti rappresenta. La pagina &egrave; tua in ogni suo elemento.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section bg-light" id="settori" role="region" aria-labelledby="settori-title">
+      <hr class="section-divider" />
+
+      <section class="section" id="settori">
         <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="settori-title" class="section-title">Design pensato per il tuo settore, non adattato.</h2>
-            <p>
-              Un ristorante di lusso e una palestra di quartiere non comunicano allo stesso modo. Conosciamo le
-              convenzioni visive, il linguaggio e le aspettative di ogni settore - e sappiamo quando rispettarle e
-              quando romperle.
-            </p>
+          <div class="left-intro reveal">
+            <p class="overline">Settori</p>
+            <h2>Design pensato per il tuo settore, non adattato.</h2>
+            <p style="margin-top:20px;max-width:560px">Un ristorante di lusso e una palestra di quartiere non comunicano allo stesso modo. Conosciamo le convenzioni visive, il linguaggio e le aspettative di ogni settore - e sappiamo quando rispettarle e quando romperle.</p>
           </div>
 
-          <div class="sectors-grid" data-stagger>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5h8v2"></path></svg>
-              <h3>Avvocati &amp; Studi Legali</h3>
-              <p>Autorevolezza e rigore visivo che trasmettono fiducia immediata.</p>
+          <div class="sectors-grid stagger reveal">
+            <article class="sector-cell"><p class="sector-name">Avvocati &amp; Studi Legali</p><p class="sector-desc">Autorevolezza e rigore visivo che trasmettono fiducia immediata.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Dentisti &amp; Cliniche</p><p class="sector-desc">Pulizia, cura del dettaglio e un'estetica che rassicura prima ancora di leggere.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Ristoranti &amp; Hotel</p><p class="sector-desc">L'atmosfera del locale si sente gi&agrave; dalla pagina.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">E-commerce</p><p class="sector-desc">Il prodotto al centro. Il resto al servizio del prodotto.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Artigiani &amp; Installatori</p><p class="sector-desc">Competenza e affidabilit&agrave; che si vedono dal primo scroll.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Coach &amp; Formatori</p><p class="sector-desc">La tua personalit&agrave; &egrave; il brand. La pagina lo racconta.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Agenzie Immobiliari</p><p class="sector-desc">Eleganza e concretezza: il cliente vuole sognare ma anche fidarsi.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Palestre &amp; Wellness</p><p class="sector-desc">Energia, trasformazione, motivazione - gi&agrave; nel design.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Agenzie Assicurative</p><p class="sector-desc">Solidit&agrave; visiva per un servizio che vende certezza.</p><div class="sector-line"></div></article>
+            <article class="sector-cell"><p class="sector-name">Studi Commercialisti</p><p class="sector-desc">Precisione e professionalit&agrave; comunicate con stile.</p><div class="sector-line"></div></article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="section why" id="perche-noi">
+        <div class="container">
+          <div class="center-head reveal">
+            <p class="overline">Perch&eacute; noi</p>
+            <h2>Quattro cose che facciamo tutte internamente. Poche agenzie possono dirlo.</h2>
+            <p style="margin-top:20px">Design, copy, sviluppo e immagini sotto lo stesso tetto significa un risultato coerente, senza passaggi di mano, senza perdita di visione.</p>
+          </div>
+
+          <div class="reveal">
+            <article class="why-row"><div class="why-no">01</div><h3 class="why-title">Design originale, ogni volta.</h3><p class="why-desc">Nessun tema, nessun template, nessun "adattiamo questo". Ogni progetto parte da una pagina bianca. Il risultato &egrave; una pagina che assomiglia a te - e solo a te.</p></article>
+            <article class="why-row"><div class="why-no">02</div><h3 class="why-title">Testi scritti per il tuo settore e il tuo tono.</h3><p class="why-desc">Il copy non &egrave; riempire gli spazi bianchi. &Egrave; trovare le parole giuste per il cliente giusto. Scriviamo in italiano, per italiani, calibrando il tono su chi sei: formale, diretto, caldo, tecnico - quello che ti rappresenta.</p></article>
+            <article class="why-row"><div class="why-no">03</div><h3 class="why-title">Sviluppo incluso. Nessun file da passare ad altri.</h3><p class="why-desc">Consegniamo una pagina funzionante, veloce e ottimizzata per mobile. Gestiamo il setup tecnico completo: dominio, hosting, SSL, form di contatto. Niente deleghe, niente extra.</p></article>
+            <article class="why-row"><div class="why-no">04</div><h3 class="why-title">Immagini selezionate o prodotte per te.</h3><p class="why-desc">Niente foto stock generiche. Selezioniamo immagini coerenti con il tuo stile e settore, oppure - per chi vuole il massimo - organizziamo una produzione fotografica dedicata. Perch&eacute; le immagini giuste cambiano tutto.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="section testimonials" id="testimonials">
+        <div class="container">
+          <div class="left-intro reveal">
+            <p class="overline">Voce clienti</p>
+            <h2>Cosa dicono le aziende che hanno scelto un design che le rappresenta.</h2>
+            <p style="margin-top:20px">Non vendiamo promesse di risultati. Vendiamo una pagina di cui essere fieri.</p>
+          </div>
+
+          <div class="test-grid stagger reveal">
+            <article class="test-card">
+              <div class="stars">★★★★★</div>
+              <span class="quote">&ldquo;</span>
+              <p class="test-quote">Avevo gi&agrave; un sito, ma sembrava uguale a quello di tutti gli altri studi legali di Milano. LandCore ha capito subito il posizionamento che volevamo comunicare - seriet&agrave; ma accessibilit&agrave; - e lo ha tradotto in qualcosa di visivamente molto preciso. Per la prima volta ho una pagina di cui sono davvero soddisfatto.</p>
+              <div class="test-meta"><div class="avatar">MT</div><div><p class="meta-name">Marco T.</p><p class="meta-role">Studio Legale Milano</p></div><span class="result-tag">Design che riflette finalmente l'identit&agrave; dello studio</span></div>
             </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4c-3.2 0-6 2.3-6 5.5S8.7 16 12 20c3.3-4 6-7.2 6-10.5S15.2 4 12 4z"></path><circle cx="12" cy="9.5" r="2"></circle></svg>
-              <h3>Dentisti &amp; Cliniche</h3>
-              <p>Pulizia, cura del dettaglio e un'estetica che rassicura prima ancora di leggere.</p>
+            <article class="test-card">
+              <div class="stars">★★★★★</div>
+              <span class="quote">&ldquo;</span>
+              <p class="test-quote">Nel mio settore l'estetica della pagina &egrave; quasi pi&ugrave; importante del contenuto - i pazienti giudicano la qualit&agrave; del medico anche dal modo in cui si presenta online. LandCore ha lavorato su ogni dettaglio visivo con una cura che non avevo trovato altrove. Il risultato &egrave; elegante, professionale e rispecchia perfettamente il mio studio.</p>
+              <div class="test-meta"><div class="avatar">LV</div><div><p class="meta-name">Dott.ssa Laura V.</p><p class="meta-role">Medico Estetico Roma</p></div><span class="result-tag">Estetica della pagina allineata all'estetica della clinica</span></div>
             </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16"></path><path d="M7 5v7a5 5 0 0 0 10 0V5"></path><path d="M10 5V3M14 5V3"></path></svg>
-              <h3>Ristoranti &amp; Hotel</h3>
-              <p>L'atmosfera del locale si sente gi&agrave; dalla pagina.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="19" r="1.6"></circle><circle cx="17" cy="19" r="1.6"></circle><path d="M3 4h2l2.3 10h10.5l2-7H7.5"></path></svg>
-              <h3>E-commerce</h3>
-              <p>Il prodotto al centro. Il resto al servizio del prodotto.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 7l3 3"></path><path d="M5 16l7-7 3 3-7 7H5v-3z"></path></svg>
-              <h3>Artigiani &amp; Installatori</h3>
-              <p>Competenza e affidabilit&agrave; che si vedono dal primo scroll.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18"></path><path d="M5 8a7 7 0 0 1 14 0"></path><path d="M5 16a7 7 0 0 0 14 0"></path></svg>
-              <h3>Coach &amp; Formatori</h3>
-              <p>La tua personalit&agrave; &egrave; il brand. La pagina lo racconta.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10l9-7 9 7"></path><path d="M5 10v10h14V10"></path></svg>
-              <h3>Agenzie Immobiliari</h3>
-              <p>Eleganza e concretezza: il cliente vuole sognare ma anche fidarsi.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 12h12"></path><path d="M8 8v8M16 8v8"></path><rect x="4" y="6" width="16" height="12" rx="2"></rect></svg>
-              <h3>Palestre &amp; Wellness</h3>
-              <p>Energia, trasformazione, motivazione - gi&agrave; nel design.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v6c0 5-3.4 7.5-8 8-4.6-.5-8-3-8-8V7l8-4z"></path></svg>
-              <h3>Agenzie Assicurative</h3>
-              <p>Solidit&agrave; visiva per un servizio che vende certezza.</p>
-            </article>
-            <article class="sector-card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
-              <h3>Studi Commercialisti</h3>
-              <p>Precisione e professionalit&agrave; comunicate con stile.</p>
+            <article class="test-card">
+              <div class="stars">★★★★★</div>
+              <span class="quote">&ldquo;</span>
+              <p class="test-quote">Avevamo una landing page funzionale ma anonima. LandCore l'ha rifatta completamente - nuova struttura, nuovo copy, nuovo design - in meno di due settimane. Il team ha capito il nostro prodotto e il nostro cliente meglio di quanto ci aspettassimo. Il risultato finale &egrave; esattamente quello che avevamo in testa ma non riuscivamo a comunicare.</p>
+              <div class="test-meta"><div class="avatar">SR</div><div><p class="meta-name">Stefano R.</p><p class="meta-role">E-commerce Manager Bologna</p></div><span class="result-tag">Da pagina anonima a pagina che racconta il brand</span></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="perche-noi" role="region" aria-labelledby="why-title">
+      <hr class="section-divider" />
+
+      <section class="section compare" id="confronto">
         <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="why-title" class="section-title">Quattro cose che facciamo tutte internamente. Poche agenzie possono dirlo.</h2>
-            <p>Design, copy, sviluppo e immagini sotto lo stesso tetto significa un risultato coerente, senza passaggi di mano, senza perdita di visione.</p>
+          <div class="left-intro reveal">
+            <p class="overline">Confronto</p>
+            <h2>LandCore vs fare tutto separatamente.</h2>
+            <p style="margin-top:20px">Molti imprenditori assemblano la loro landing pagando designer, copywriter e sviluppatore separatamente. Ecco cosa succede di solito.</p>
           </div>
 
-          <div class="why-grid" data-stagger>
-            <article class="why-card card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 4-9 4-9-4 9-4z"></path><path d="M3 11l9 4 9-4"></path><path d="M3 15l9 4 9-4"></path></svg>
-              <h3>Design originale, ogni volta.</h3>
-              <p>Nessun tema, nessun template, nessun \"adattiamo questo\". Ogni progetto parte da una pagina bianca. Il risultato &egrave; una pagina che assomiglia a te - e solo a te.</p>
-            </article>
-            <article class="why-card card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16"></path><path d="M8 4h8v4H8z"></path><path d="M8 12h8M6 16h12"></path></svg>
-              <h3>Testi scritti per il tuo settore e il tuo tono.</h3>
-              <p>Il copy non &egrave; riempire gli spazi bianchi. &Egrave; trovare le parole giuste per il cliente giusto. Scriviamo in italiano, per italiani, calibrando il tono su chi sei: formale, diretto, caldo, tecnico - quello che ti rappresenta.</p>
-            </article>
-            <article class="why-card card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg>
-              <h3>Sviluppo incluso. Nessun file da passare ad altri.</h3>
-              <p>Consegniamo una pagina funzionante, veloce e ottimizzata per mobile. Gestiamo il setup tecnico completo: dominio, hosting, SSL, form di contatto. Niente deleghe, niente extra.</p>
-            </article>
-            <article class="why-card card" data-animate>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-              <h3>Immagini selezionate o prodotte per te.</h3>
-              <p>Niente foto stock generiche. Selezioniamo immagini coerenti con il tuo stile e settore, oppure - per chi vuole il massimo - organizziamo una produzione fotografica dedicata. Perch&eacute; le immagini giuste cambiano tutto.</p>
-            </article>
+          <div class="compare-grid reveal">
+            <div class="compare-cell compare-head"></div>
+            <div class="compare-cell compare-head lc"><span class="pill-reco">Consigliato</span><br />LandCore</div>
+            <div class="compare-cell compare-head alt">Separato / Tradizionale</div>
+
+            <div class="compare-cell label">Design</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>Incluso, su misura</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Freelance separato, brief da rifare</div>
+
+            <div class="compare-cell label">Copy</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>Incluso, settore-specifico</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Altro fornitore, altro brief</div>
+
+            <div class="compare-cell label">Sviluppo</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>Incluso, consegna completa</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Terzo fornitore, coordinazione a tuo carico</div>
+
+            <div class="compare-cell label">Immagini</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>Incluse e coerenti</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Stock generiche o costo extra</div>
+
+            <div class="compare-cell label">Coerenza visiva</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>Garantita - nasce tutto insieme</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Dipende da quanto i fornitori si parlano</div>
+
+            <div class="compare-cell label">Tempo</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>10 giorni lavorativi</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Settimane di coordinamento</div>
+
+            <div class="compare-cell label">Interlocutore</div>
+            <div class="compare-cell lc"><span class="mark-ok">✓</span>Uno solo</div>
+            <div class="compare-cell alt"><span class="mark-no">✗</span>Tre o pi&ugrave;, ognuno con le sue priorit&agrave;</div>
           </div>
         </div>
       </section>
 
-      <section class="section bg-light" id="confronto" role="region" aria-labelledby="confronto-title">
+      <hr class="section-divider" />
+
+      <section class="section faq" id="faq">
         <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="confronto-title" class="section-title">LandCore vs fare tutto separatamente.</h2>
-            <p>Molti imprenditori assemblano la loro landing pagando designer, copywriter e sviluppatore separatamente. Ecco cosa succede di solito.</p>
+          <div class="left-intro reveal">
+            <p class="overline">FAQ</p>
+            <h2>Domande frequenti.</h2>
+            <p class="faq-contact">Hai altre domande? &rarr; <a href="mailto:ciao@landcore.it">ciao@landcore.it</a></p>
           </div>
-          <div class="comparison-wrap">
-            <div class="comparison-grid" data-stagger>
-            <div class="comparison-cell label comparison-head"></div>
-            <div class="comparison-cell landcore comparison-head">Tutto in uno</div>
-            <div class="comparison-cell traditional comparison-head">Fai da te / separato</div>
 
-            <div class="comparison-cell label">Design</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Incluso, su misura</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Freelance separato, brief da rifare</div>
-
-            <div class="comparison-cell label">Copy</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Incluso, settore-specifico</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Altro fornitore, altro brief</div>
-
-            <div class="comparison-cell label">Sviluppo</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Incluso, consegna completa</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Terzo fornitore, coordinazione a tuo carico</div>
-
-            <div class="comparison-cell label">Immagini</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Incluse e coerenti</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Stock generiche o costo extra</div>
-
-            <div class="comparison-cell label">Coerenza visiva</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Garantita - nasce tutto insieme</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Dipende da quanto i fornitori si parlano</div>
-
-            <div class="comparison-cell label">Tempo</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>10 giorni lavorativi</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Settimane di coordinamento</div>
-
-            <div class="comparison-cell label">Interlocutore</div>
-            <div class="comparison-cell landcore comparison-item ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>Uno solo</div>
-            <div class="comparison-cell traditional comparison-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>Tre o pi&ugrave;, ognuno con le sue priorit&agrave;</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="testimonials" role="region" aria-labelledby="testimonials-title">
-        <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="testimonials-title" class="section-title">Cosa dicono le aziende che hanno scelto un design che le rappresenta.</h2>
-            <p>Non vendiamo promesse di risultati. Vendiamo una pagina di cui essere fieri.</p>
-          </div>
-          <div class="testimonials-grid" data-stagger>
-            <article class="testimonial-card card">
-              <div class="testimonial-stars" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-              </div>
-              <p class="quote-mark">&ldquo;</p>
-              <p class="testimonial-text">
-                Avevo gi&agrave; un sito, ma sembrava uguale a quello di tutti gli altri studi legali di Milano. LandCore ha
-                capito subito il posizionamento che volevamo comunicare - seriet&agrave; ma accessibilit&agrave; - e lo ha tradotto
-                in qualcosa di visivamente molto preciso. Per la prima volta ho una pagina di cui sono davvero
-                soddisfatto.
-              </p>
-              <div class="testimonial-meta">
-                <div class="avatar" aria-hidden="true">MT</div>
-                <div>
-                  <p class="meta-name">Marco T.</p>
-                  <p class="meta-role">Studio Legale Milano</p>
-                  <p class="meta-result">Design che riflette finalmente l'identit&agrave; dello studio</p>
-                </div>
-              </div>
-            </article>
-            <article class="testimonial-card card">
-              <div class="testimonial-stars" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-              </div>
-              <p class="quote-mark">&ldquo;</p>
-              <p class="testimonial-text">
-                Nel mio settore l'estetica della pagina &egrave; quasi pi&ugrave; importante del contenuto - i pazienti giudicano la
-                qualit&agrave; del medico anche dal modo in cui si presenta online. LandCore ha lavorato su ogni dettaglio
-                visivo con una cura che non avevo trovato altrove. Il risultato &egrave; elegante, professionale e rispecchia
-                perfettamente il mio studio.
-              </p>
-              <div class="testimonial-meta">
-                <div class="avatar" aria-hidden="true">LV</div>
-                <div>
-                  <p class="meta-name">Dott.ssa Laura V.</p>
-                  <p class="meta-role">Medico Estetico Roma</p>
-                  <p class="meta-result">Estetica della pagina allineata all'estetica della clinica</p>
-                </div>
-              </div>
-            </article>
-            <article class="testimonial-card card">
-              <div class="testimonial-stars" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 7 1-5 4.8 1.2 6.9L12 17.7 5.7 21l1.2-6.9-5-4.8 7-1z"/></svg>
-              </div>
-              <p class="quote-mark">&ldquo;</p>
-              <p class="testimonial-text">
-                Avevamo una landing page funzionale ma anonima. LandCore l'ha rifatta completamente - nuova struttura,
-                nuovo copy, nuovo design - in meno di due settimane. Il team ha capito il nostro prodotto e il nostro
-                cliente meglio di quanto ci aspettassimo. Il risultato finale &egrave; esattamente quello che avevamo in testa
-                ma non riuscivamo a comunicare.
-              </p>
-              <div class="testimonial-meta">
-                <div class="avatar" aria-hidden="true">SR</div>
-                <div>
-                  <p class="meta-name">Stefano R.</p>
-                  <p class="meta-role">E-commerce Manager Bologna</p>
-                  <p class="meta-result">Da pagina anonima a pagina che racconta il brand</p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <p class="testimonials-rating"><span class="stars">★★★★★</span> 4.9/5 basato su 87 recensioni verificate</p>
-        </div>
-      </section>
-
-      <section class="section bg-light" id="faq" role="region" aria-labelledby="faq-title">
-        <div class="container">
-          <div class="section-intro" data-animate>
-            <h2 id="faq-title" class="section-title">Domande frequenti.</h2>
-          </div>
-          <p class="faq-lead">Hai altre domande? Scrivici a <a href="mailto:ciao@landcore.it">ciao@landcore.it</a></p>
-
-          <div class="faq-list" data-stagger>
+          <div class="faq-list reveal">
             <article class="faq-item open">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Quanto costa una landing page con LandCore?">
-                Quanto costa una landing page con LandCore?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer" style="max-height: 180px">
-                <p>
-                  Il nostro servizio completo - design su misura, copy, sviluppo e selezione immagini - parte da 1.200€.
-                  Il prezzo varia in base alla complessit&agrave; del progetto e ai servizi aggiuntivi come la produzione
-                  fotografica. In ogni caso il preventivo &egrave; fisso: nessun costo nascosto, nessuna sorpresa a fine lavori.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Quanto tempo ci vuole?">
-                Quanto tempo ci vuole?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  10 giorni lavorativi dall'approvazione del brief. Questa &egrave; la nostra tempistica standard per un
-                  progetto completo. Per lavorazioni pi&ugrave; articolate i tempi vengono concordati prima di iniziare - sempre
-                  in modo trasparente.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Devo gi&agrave; avere un sito?">
-                Devo gi&agrave; avere un sito?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  No. La landing page pu&ograve; vivere come pagina standalone con un suo dominio, oppure essere integrata nel
-                  sito che hai gi&agrave;. Gestiamo entrambe le situazioni, incluso il setup tecnico completo.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Fornite anche dominio e hosting?">
-                Fornite anche dominio e hosting?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  S&igrave;. Per chi parte da zero offriamo un pacchetto completo con dominio, hosting, certificato SSL e
-                  configurazione tecnica. Chi ha gi&agrave; un provider pu&ograve; continuare ad usarlo - ci adattiamo noi.
-                </p>
-              </div>
-            </article>
-
-            <article class="faq-item">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Quante revisioni sono incluse?">
-                Quante revisioni sono incluse?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Includiamo due cicli di revisione nel prezzo. La nostra esperienza ci dice che con un brief ben fatto,
-                  &egrave; pi&ugrave; che sufficiente per arrivare a un risultato che ti soddisfa pienamente. Se necessario, ulteriori
-                  revisioni vengono concordate.
-                </p>
-              </div>
+              <button class="faq-btn" type="button"><span class="faq-q">Quanto costa una landing page con LandCore?</span><span class="faq-toggle">−</span></button>
+              <div class="faq-answer" style="max-height: 260px"><p>Il nostro servizio completo - design su misura, copy, sviluppo e selezione immagini - parte da 1.200€. Il prezzo varia in base alla complessit&agrave; del progetto e ai servizi aggiuntivi come la produzione fotografica. In ogni caso il preventivo &egrave; fisso: nessun costo nascosto, nessuna sorpresa a fine lavori.</p></div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Producete anche le fotografie?">
-                Producete anche le fotografie?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  S&igrave;, per chi vuole il massimo della coerenza visiva organizziamo sessioni fotografiche dedicate. &Egrave; un
-                  servizio opzionale che aggiungiamo al progetto base. Le foto vengono scattate, selezionate e ottimizzate
-                  per la pagina - nessuna foto stock generica.
-                </p>
-              </div>
+              <button class="faq-btn" type="button"><span class="faq-q">Quanto tempo ci vuole?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-answer"><p>10 giorni lavorativi dall'approvazione del brief. Questa &egrave; la nostra tempistica standard per un progetto completo. Per lavorazioni pi&ugrave; articolate i tempi vengono concordati prima di iniziare - sempre in modo trasparente.</p></div>
             </article>
             <article class="faq-item">
-              <button class="faq-question" type="button" aria-label="Apri risposta: Lavorate solo con aziende gi&agrave; avviate?">
-                Lavorate solo con aziende gi&agrave; avviate?
-                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  No. Lavoriamo anche con professionisti che si lanciano per la prima volta online e hanno bisogno di
-                  costruire tutto da zero - identit&agrave; visiva inclusa. Anzi, &egrave; uno dei contesti in cui il nostro approccio
-                  su misura fa la differenza maggiore.
-                </p>
-              </div>
+              <button class="faq-btn" type="button"><span class="faq-q">Devo gi&agrave; avere un sito?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-answer"><p>No. La landing page pu&ograve; vivere come pagina standalone con un suo dominio, oppure essere integrata nel sito che hai gi&agrave;. Gestiamo entrambe le situazioni, incluso il setup tecnico completo.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-btn" type="button"><span class="faq-q">Fornite anche dominio e hosting?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-answer"><p>S&igrave;. Per chi parte da zero offriamo un pacchetto completo con dominio, hosting, certificato SSL e configurazione tecnica. Chi ha gi&agrave; un provider pu&ograve; continuare ad usarlo - ci adattiamo noi.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-btn" type="button"><span class="faq-q">Quante revisioni sono incluse?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-answer"><p>Includiamo due cicli di revisione nel prezzo. La nostra esperienza ci dice che con un brief ben fatto, &egrave; pi&ugrave; che sufficiente per arrivare a un risultato che ti soddisfa pienamente. Se necessario, ulteriori revisioni vengono concordate.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-btn" type="button"><span class="faq-q">Producete anche le fotografie?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-answer"><p>S&igrave;, per chi vuole il massimo della coerenza visiva organizziamo sessioni fotografiche dedicate. &Egrave; un servizio opzionale che aggiungiamo al progetto base. Le foto vengono scattate, selezionate e ottimizzate per la pagina - nessuna foto stock generica.</p></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-btn" type="button"><span class="faq-q">Lavorate solo con aziende gi&agrave; avviate?</span><span class="faq-toggle">+</span></button>
+              <div class="faq-answer"><p>No. Lavoriamo anche con professionisti che si lanciano per la prima volta online e hanno bisogno di costruire tutto da zero - identit&agrave; visiva inclusa. Anzi, &egrave; uno dei contesti in cui il nostro approccio su misura fa la differenza maggiore.</p></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="cta-final" id="cta" role="region" aria-labelledby="cta-title">
-        <div class="container" data-animate>
-          <h2 id="cta-title" class="section-title">Hai un'azienda che merita una pagina all'altezza. Costruiamola insieme.</h2>
-          <p>
-            Una landing page &egrave; spesso il primo contatto che un potenziale cliente ha con te. Quella prima impressione
-            vale. Raccontaci il tuo progetto: in 20 minuti capiamo insieme cosa ti serve e come possiamo farlo.
-          </p>
-          <a href="#home" class="btn btn-white pulse-cta-light interactive">Parliamo del tuo progetto &rarr;</a>
-          <p class="trust-line">Oltre 120 aziende ci hanno gi&agrave; scelto</p>
-          <div class="cta-assurances">
-            <span>🎨 Design su misura</span>
-            <span>📝 Copy incluso</span>
-            <span>⚡ Consegna in 10 giorni</span>
-          </div>
-          <p class="cta-note">Nessun obbligo. Solo una conversazione per capire se siamo la scelta giusta per te.</p>
+      <hr class="section-divider" />
+
+      <section class="final-cta section" id="cta">
+        <div class="container reveal">
+          <p class="overline">Iniziamo</p>
+          <h2>Hai un'azienda che merita<br /><span>una pagina all'altezza.</span></h2>
+          <p class="final-body">Una landing page &egrave; spesso il primo contatto che un potenziale cliente ha con te. Quella prima impressione vale. Raccontaci il tuo progetto: in 20 minuti capiamo insieme cosa ti serve e come possiamo farlo.</p>
+          <a href="#home" class="btn pulse-gold">Parliamo del tuo progetto &rarr;</a>
+          <div class="trust-row"><span>🎨 Design su misura</span><span class="sep">·</span><span>📝 Copy incluso</span><span class="sep">·</span><span>⚡ 10 giorni</span></div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <h3 class="logo footer-logo">LandCore</h3>
-          <p class="footer-muted">Design, copy, sviluppo e immagini per landing page che rappresentano chi sei.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38zM5.25 3a1.97 1.97 0 1 0 0 3.94A1.97 1.97 0 0 0 5.25 3zM20.44 13.5c0-3.23-1.72-4.73-4.02-4.73-1.85 0-2.68 1.02-3.14 1.74v-1.5H9.9c.04 1 .01 11 .01 11h3.38v-6.14c0-.33.02-.67.12-.9.26-.67.84-1.37 1.82-1.37 1.28 0 1.79.98 1.79 2.42v5.99H20.4z"/></svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 3h8.4A4.8 4.8 0 0 1 21 7.8v8.4a4.8 4.8 0 0 1-4.8 4.8H7.8A4.8 4.8 0 0 1 3 16.2V7.8A4.8 4.8 0 0 1 7.8 3zm0 1.8A3 3 0 0 0 4.8 7.8v8.4a3 3 0 0 0 3 3h8.4a3 3 0 0 0 3-3V7.8a3 3 0 0 0-3-3zm9.3 1.35a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8zm0 1.8A2.4 2.4 0 1 0 14.4 12 2.4 2.4 0 0 0 12 9.6z"/></svg>
-            </a>
-            <a href="#" aria-label="X">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3h2.9l-6.3 7.2L23 21h-5.9l-4.6-6.1L7.2 21H4.3l6.8-7.8L1 3h6l4.2 5.6zm-1 16.3h1.6L6.2 4.6H4.5z"/></svg>
-            </a>
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <div class="brand"><span class="brand-monogram">LC</span><span class="brand-name">LandCore</span></div>
+            <p class="footer-tag">Design, copy, sviluppo e immagini per landing page che rappresentano chi sei.</p>
+          </div>
+          <nav class="footer-nav">
+            <a href="#metodo">Metodo</a>
+            <a href="#settori">Settori</a>
+            <a href="#perche-noi">Perch&eacute; noi</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+          <div>
+            <div class="social-row">
+              <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38zM5.25 3a1.97 1.97 0 1 0 0 3.94A1.97 1.97 0 0 0 5.25 3zM20.44 13.5c0-3.23-1.72-4.73-4.02-4.73-1.85 0-2.68 1.02-3.14 1.74v-1.5H9.9c.04 1 .01 11 .01 11h3.38v-6.14c0-.33.02-.67.12-.9.26-.67.84-1.37 1.82-1.37 1.28 0 1.79.98 1.79 2.42v5.99H20.4z"/></svg></a>
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 3h8.4A4.8 4.8 0 0 1 21 7.8v8.4a4.8 4.8 0 0 1-4.8 4.8H7.8A4.8 4.8 0 0 1 3 16.2V7.8A4.8 4.8 0 0 1 7.8 3zm0 1.8A3 3 0 0 0 4.8 7.8v8.4a3 3 0 0 0 3 3h8.4a3 3 0 0 0 3-3V7.8a3 3 0 0 0-3-3zm9.3 1.35a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8zm0 1.8A2.4 2.4 0 1 0 14.4 12 2.4 2.4 0 0 0 12 9.6z"/></svg></a>
+            </div>
+            <a class="footer-mail" href="mailto:ciao@landcore.it">ciao@landcore.it</a>
           </div>
         </div>
-
-        <nav>
-          <a href="#metodo">Metodo</a><br />
-          <a href="#settori">Settori</a><br />
-          <a href="#perche-noi">Perch&eacute; noi</a><br />
-          <a href="#faq">FAQ</a>
-        </nav>
-
-        <div>
-          <a href="#">Privacy Policy</a><br />
-          <a href="#">Cookie Policy</a><br />
-          <a href="#">Termini di Servizio</a>
+        <div class="footer-bottom">
+          <span>© 2025 LandCore — P.IVA 12345678901</span>
+          <span>Privacy · Cookie · Termini</span>
         </div>
       </div>
-      <div class="container footer-bottom">© 2025 LandCore — P.IVA 12345678901 — Tutti i diritti riservati</div>
     </footer>
 
-    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
-      <a href="#cta" class="pulse-cta">Parliamo del tuo progetto &rarr;</a>
-    </div>
-
-    <button class="back-to-top" id="backToTop" type="button" aria-label="Torna in alto">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>
-    </button>
+    <a class="mobile-sticky" id="mobileSticky" href="#cta">Parliamo del tuo progetto &rarr;</a>
 
     <div class="exit-modal" id="exitModal" aria-hidden="true">
-      <div class="exit-card" role="dialog" aria-modal="true" aria-labelledby="exit-title">
-        <h3 id="exit-title">Prima di andare — un'ultima cosa.</h3>
+      <div class="exit-card" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+        <button type="button" class="exit-close" id="exitClose" aria-label="Chiudi">×</button>
+        <h3 id="exitTitle">Prima di andare — un'ultima cosa.</h3>
         <p>Se stai cercando qualcuno che capisca davvero il tuo settore e costruisca una pagina che ti rappresenti, quella conversazione dura 20 minuti e non costa nulla.</p>
-        <a href="#cta" class="btn btn-primary pulse-cta" id="exitCta">Parliamo del progetto</a>
-        <button type="button" class="exit-close-link" id="exitCloseLink">Per ora non fa per me — grazie</button>
+        <a href="#cta" class="btn" id="exitCta">Parliamo del progetto</a>
+        <a href="#" class="exit-link" id="exitLink">Per ora non fa per me — grazie</a>
       </div>
     </div>
 
     <script>
+      const bezierFast = 'cubic-bezier(0.16, 1, 0.3, 1)';
+
       const header = document.querySelector('.site-header');
-      const progressBar = document.querySelector('.scroll-progress-bar');
-      const menuToggle = document.querySelector('.menu-toggle');
-      const mobileMenu = document.querySelector('#mobile-menu');
-      const allMenuLinks = document.querySelectorAll('a[href^="#"]');
-      const faqItems = document.querySelectorAll('.faq-item');
-      const animatedElements = document.querySelectorAll('[data-animate], [data-stagger]');
+      const progressBar = document.getElementById('progressBar');
+      const introOverlay = document.getElementById('introOverlay');
+      const cursor = document.getElementById('cursor');
+      const grainCanvas = document.getElementById('grainCanvas');
+      const reveals = document.querySelectorAll('.reveal');
       const counters = document.querySelectorAll('[data-counter]');
-      const numbersSection = document.querySelector('.numbers-bar');
-      const heroSection = document.querySelector('.hero');
-      const stickyMobileCta = document.querySelector('#mobile-sticky-cta');
-      const backToTop = document.querySelector('#backToTop');
-      const exitModal = document.querySelector('#exitModal');
-      const exitCloseLink = document.querySelector('#exitCloseLink');
-      const exitCta = document.querySelector('#exitCta');
+      const numbers = document.getElementById('numbersGrid');
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileSticky = document.getElementById('mobileSticky');
+      const hero = document.querySelector('.hero');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const exitModal = document.getElementById('exitModal');
+      const exitClose = document.getElementById('exitClose');
+      const exitLink = document.getElementById('exitLink');
+      const exitCta = document.getElementById('exitCta');
 
-      let hasShownExit = false;
       let countersStarted = false;
+      let exitShown = false;
 
-      const updateScrollUI = () => {
-        if (window.scrollY > 60) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
+      setTimeout(() => {
+        introOverlay.classList.add('hide');
+      }, 600);
 
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? window.scrollY / docHeight : 0;
-        progressBar.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+      const onScroll = () => {
+        if (window.scrollY > 80) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
 
-        if (window.scrollY > 400) {
-          backToTop.classList.add('show');
-        } else {
-          backToTop.classList.remove('show');
-        }
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = total > 0 ? window.scrollY / total : 0;
+        progressBar.style.transform = `scaleX(${Math.min(Math.max(pct, 0), 1)})`;
       };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
 
-      updateScrollUI();
-      window.addEventListener('scroll', updateScrollUI, { passive: true });
+      if (window.matchMedia('(hover: hover)').matches) {
+        window.addEventListener('mousemove', (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
 
-      if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-          const isOpen = mobileMenu.classList.toggle('open');
-          menuToggle.classList.toggle('active', isOpen);
-          menuToggle.setAttribute('aria-expanded', String(isOpen));
-          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
-          document.body.style.overflow = isOpen ? 'hidden' : '';
+        document.querySelectorAll('a, button').forEach((el) => {
+          el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+          el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
         });
       }
 
-      allMenuLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          if (mobileMenu.classList.contains('open')) {
-            mobileMenu.classList.remove('open');
-            menuToggle.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            mobileMenu.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-          }
-        });
-      });
+      const gctx = grainCanvas.getContext('2d');
+      const resizeGrain = () => {
+        grainCanvas.width = window.innerWidth;
+        grainCanvas.height = window.innerHeight;
+      };
+      resizeGrain();
+      window.addEventListener('resize', resizeGrain);
 
-      faqItems.forEach((item) => {
-        const button = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-
-        button.addEventListener('click', () => {
-          faqItems.forEach((other) => {
-            const otherAnswer = other.querySelector('.faq-answer');
-            if (other !== item) {
-              other.classList.remove('open');
-              otherAnswer.style.maxHeight = null;
-            }
-          });
-
-          const isOpen = item.classList.toggle('open');
-          answer.style.maxHeight = isOpen ? `${answer.scrollHeight}px` : null;
-        });
-      });
+      const drawGrain = () => {
+        const w = grainCanvas.width;
+        const h = grainCanvas.height;
+        const imageData = gctx.createImageData(w, h);
+        const data = imageData.data;
+        for (let i = 0; i < data.length; i += 4) {
+          const n = Math.random() * 255;
+          data[i] = n;
+          data[i + 1] = n;
+          data[i + 2] = n;
+          data[i + 3] = 9;
+        }
+        gctx.putImageData(imageData, 0, 0);
+        requestAnimationFrame(drawGrain);
+      };
+      requestAnimationFrame(drawGrain);
 
       const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              if (entry.target.hasAttribute('data-stagger')) {
-                const children = entry.target.querySelectorAll(':scope > *');
-                children.forEach((child, idx) => {
-                  child.style.transitionDelay = `${idx * 70}ms`;
-                });
-              }
-              entry.target.classList.add('in-view');
-              revealObserver.unobserve(entry.target);
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            if (el.classList.contains('stagger')) {
+              const children = el.querySelectorAll(':scope > *');
+              children.forEach((child, idx) => {
+                child.style.transitionDelay = `${idx * 0.08}s`;
+              });
             }
+            el.classList.add('visible');
+            revealObserver.unobserve(el);
           });
         },
-        {
-          threshold: 0.15,
-          rootMargin: '0px 0px -40px 0px'
-        }
+        { threshold: 0.16 }
       );
-
-      animatedElements.forEach((el) => revealObserver.observe(el));
+      reveals.forEach((el) => revealObserver.observe(el));
 
       const animateCounter = (el) => {
-        const target = Number(el.getAttribute('data-counter'));
-        const suffix = el.getAttribute('data-suffix') || '';
-        const duration = 1400;
-        const startTime = performance.now();
+        const target = Number(el.dataset.counter || 0);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
 
-        const step = (now) => {
-          const progress = Math.min((now - startTime) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const value = Math.floor(eased * target);
-          el.textContent = `${value}${suffix}`;
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          } else {
-            el.textContent = `${target}${suffix}`;
-          }
+        const frame = (now) => {
+          const t = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - t, 3);
+          el.textContent = `${Math.floor(target * ease)}${suffix}`;
+          if (t < 1) requestAnimationFrame(frame);
+          else el.textContent = `${target}${suffix}`;
         };
-
-        requestAnimationFrame(step);
+        requestAnimationFrame(frame);
       };
 
       const counterObserver = new IntersectionObserver(
@@ -2127,73 +2057,87 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting && !countersStarted) {
               countersStarted = true;
-              counters.forEach((counter) => animateCounter(counter));
-              if (numbersSection) {
-                counterObserver.unobserve(numbersSection);
-              }
+              counters.forEach(animateCounter);
+              counterObserver.unobserve(numbers);
             }
           });
         },
-        { threshold: 0.2, rootMargin: '0px 0px -40px 0px' }
+        { threshold: 0.35 }
       );
+      counterObserver.observe(numbers);
 
-      if (numbersSection) {
-        counterObserver.observe(numbersSection);
-      }
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        menuToggle.classList.toggle('active', isOpen);
+        document.body.classList.toggle('nav-open', isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          menuToggle.classList.remove('active');
+          document.body.classList.remove('nav-open');
+        });
+      });
 
       const stickyObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (window.innerWidth >= 768) return;
-            if (entry.isIntersecting) {
-              stickyMobileCta.classList.remove('show');
-            } else {
-              stickyMobileCta.classList.add('show');
-            }
+            if (window.innerWidth > 768) return;
+            mobileSticky.classList.toggle('show', !entry.isIntersecting);
           });
         },
         { threshold: 0.2 }
       );
+      stickyObserver.observe(hero);
 
-      if (heroSection) {
-        stickyObserver.observe(heroSection);
-      }
+      faqItems.forEach((item) => {
+        const btn = item.querySelector('.faq-btn');
+        const ans = item.querySelector('.faq-answer');
+        const toggle = item.querySelector('.faq-toggle');
 
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        btn.addEventListener('click', () => {
+          faqItems.forEach((other) => {
+            if (other === item) return;
+            other.classList.remove('open');
+            other.querySelector('.faq-answer').style.maxHeight = null;
+            other.querySelector('.faq-toggle').textContent = '+';
+          });
+
+          const open = item.classList.toggle('open');
+          ans.style.maxHeight = open ? `${ans.scrollHeight}px` : null;
+          toggle.textContent = open ? '−' : '+';
+        });
       });
 
-      const openExitModal = () => {
-        if (hasShownExit) return;
-        hasShownExit = true;
-        exitModal.classList.add('open');
-        exitModal.setAttribute('aria-hidden', 'false');
-      };
-
-      const closeExitModal = () => {
+      const closeExit = () => {
         exitModal.classList.remove('open');
         exitModal.setAttribute('aria-hidden', 'true');
       };
 
-      document.addEventListener('mouseleave', (event) => {
-        if (event.clientY <= 0 && !hasShownExit) {
-          openExitModal();
-        }
+      if (window.matchMedia('(min-width: 769px)').matches) {
+        document.addEventListener('mouseleave', (e) => {
+          if (e.clientY <= 0 && !exitShown) {
+            exitShown = true;
+            exitModal.classList.add('open');
+            exitModal.setAttribute('aria-hidden', 'false');
+          }
+        });
+      }
+
+      exitClose.addEventListener('click', closeExit);
+      exitLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeExit();
+      });
+      exitCta.addEventListener('click', closeExit);
+
+      exitModal.addEventListener('click', (e) => {
+        if (e.target === exitModal) closeExit();
       });
 
-      exitModal.addEventListener('click', (event) => {
-        if (event.target === exitModal) {
-          closeExitModal();
-        }
-      });
-
-      exitCloseLink.addEventListener('click', closeExitModal);
-      exitCta.addEventListener('click', closeExitModal);
-
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && exitModal.classList.contains('open')) {
-          closeExitModal();
-        }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeExit();
       });
     </script>
   </body>
