@@ -99,6 +99,15 @@
         color: var(--indigo);
       }
 
+      .subtitle,
+      .section-subtitle {
+        color: var(--text-secondary);
+        font-weight: 300;
+        font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+        line-height: 1.8;
+        max-width: 560px;
+      }
+
       .btn {
         border: 1px solid var(--border);
         background: var(--white);
@@ -206,8 +215,7 @@
       }
 
       .site-header.scrolled {
-        background: var(--white);
-        opacity: 0.88;
+        background: rgba(250, 250, 250, 0.88);
         backdrop-filter: blur(18px);
       }
 
@@ -219,20 +227,24 @@
         gap: 1rem;
       }
 
-      .logo {
+      .logo,
+      .nav-logo {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 1.3rem;
-        letter-spacing: 0.08em;
+        font-size: 1.5rem;
+        letter-spacing: 0.06em;
         color: var(--text-primary);
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
       }
 
-      .logo-dot {
+      .logo-dot,
+      .nav-logo-dot {
         width: 8px;
         height: 8px;
         background: var(--indigo);
+        border-radius: 1px;
+        flex-shrink: 0;
       }
 
       .nav-links {
@@ -270,7 +282,8 @@
         display: none;
       }
 
-      .marquee-strip {
+      .marquee-strip,
+      .marquee-strip-1 {
         margin-top: 76px;
         border-bottom: 1px solid var(--border);
         overflow: hidden;
@@ -291,7 +304,10 @@
         color: var(--text-primary);
       }
 
-      .marquee-track .sep {
+      .marquee-strip-1 .marquee-track { color: var(--text-primary); }
+
+      .marquee-track .sep,
+      .marquee-strip-1 .sep {
         color: var(--indigo);
         font-size: 0.7rem;
       }
@@ -304,30 +320,48 @@
       .marquee-strip:hover .marquee-track { animation-play-state: paused; }
 
       .hero {
-        min-height: calc(100vh - 76px);
+        min-height: 100vh;
         display: flex;
         align-items: center;
-        background:
-          radial-gradient(ellipse 70% 60% at 30% 50%, var(--indigo-glow) 0%, transparent 70%),
-          linear-gradient(var(--border-soft) 1px, transparent 1px),
-          linear-gradient(90deg, var(--border-soft) 1px, transparent 1px),
-          var(--white);
-        background-size: auto, 48px 48px, 48px 48px, auto;
+        padding-top: 120px;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 55% 45%;
-        gap: 24px;
+        grid-template-columns: 58% 42%;
+        gap: 80px;
         align-items: center;
       }
 
-      .hero-title {
-        margin-top: 14px;
-        color: var(--text-primary);
+      .hero-pill {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(74, 58, 255, 0.25);
+        background: rgba(74, 58, 255, 0.06);
+        color: var(--indigo);
+        font-size: 0.72rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        padding: 6px 14px;
+        border-radius: 20px;
       }
 
-      .hero-title .line-2 { color: var(--indigo); }
+      .hero-title,
+      .hero h1 {
+        margin-top: 14px;
+        color: #1A1917;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(5rem, 13vw, 13rem);
+        line-height: 0.88;
+        letter-spacing: -0.01em;
+      }
+
+      .hero-title .line-2,
+      .hero h1 .accent {
+        color: var(--indigo);
+        display: block;
+      }
 
       .hero-word {
         display: inline-block;
@@ -347,85 +381,94 @@
       }
 
       .hero-sub {
-        max-width: 420px;
+        max-width: 500px;
         margin-top: 20px;
         opacity: 0;
         animation: fadeSub 0.8s forwards;
         animation-delay: 0.9s;
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        line-height: 1.75;
       }
 
       @keyframes fadeSub { to { opacity: 1; } }
 
       .hero-actions {
-        margin-top: 48px;
+        margin-top: 40px;
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
       }
 
       .hero-stats {
-        margin-top: 56px;
-        font-size: 0.78rem;
+        margin-top: 48px;
+        font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         color: var(--text-muted);
       }
 
       .hero-visual {
+        width: 42%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        max-width: 500px;
-        margin-left: auto;
       }
 
       .mock {
+        width: 100%;
+        max-width: 380px;
         border: 1px solid var(--border);
-        border-radius: 8px;
+        border-radius: 10px;
         background: var(--off-white);
         overflow: hidden;
         transform: rotate(1.5deg);
-        box-shadow: 0 40px 80px var(--border-soft);
+        box-shadow: 0 32px 80px rgba(26,25,23,0.10), 0 8px 24px rgba(26,25,23,0.06);
         animation: floatMock 5s ease-in-out infinite;
       }
 
       @keyframes floatMock {
         0%, 100% { transform: rotate(1.5deg) translateY(0); }
-        50% { transform: rotate(1.5deg) translateY(-10px); }
+        50% { transform: rotate(1.5deg) translateY(-12px); }
       }
 
       .mock-top {
-        height: 36px;
+        height: 38px;
         background: var(--grey-light);
-        border-bottom: 1px solid var(--border);
         display: flex;
         align-items: center;
-        padding: 0 12px;
-        gap: 6px;
+        padding: 0 14px;
+        gap: 10px;
       }
 
       .dot {
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
-        background: var(--grey-mid);
+        background: #D1CFCB;
       }
 
       .fake-url {
-        margin-left: auto;
-        margin-right: auto;
-        width: 56%;
-        height: 16px;
-        border: 1px solid var(--border);
-        border-radius: 999px;
+        flex: 1;
+        height: 22px;
+        border-radius: 4px;
         background: var(--white);
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .mock-body {
-        padding: 24px;
+        padding: 20px 18px;
       }
 
       .m-hero {
-        height: 120px;
-        border-radius: 4px;
+        height: 100px;
+        border-radius: 6px;
         background: linear-gradient(135deg, var(--indigo-pale) 0%, var(--grey-light) 100%);
       }
 
@@ -435,13 +478,13 @@
         background: var(--grey-light);
       }
 
-      .m-line { height: 10px; margin-top: 10px; }
+      .m-line { height: 12px; margin-top: 10px; }
       .m-sm { height: 7px; margin-top: 8px; }
-      .w-80 { width: 80%; }
+      .w-80 { width: 75%; }
       .w-55 { width: 55%; }
-      .w-92 { width: 92%; }
+      .w-92 { width: 90%; }
       .w-77 { width: 77%; }
-      .w-64 { width: 64%; }
+      .w-64 { width: 70%; }
 
       .m-accent {
         width: 40px;
@@ -451,24 +494,24 @@
       }
 
       .m-btn {
-        width: 96px;
-        height: 24px;
+        width: 100px;
+        height: 28px;
         background: var(--indigo);
-        border-radius: 3px;
-        margin-top: 16px;
+        border-radius: 4px;
+        margin-top: 6px;
       }
 
       .work-badge {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 48px;
+        right: -1px;
         background: var(--indigo);
         color: var(--white);
-        font-size: 0.65rem;
+        font-size: 0.62rem;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        border-radius: 3px;
-        padding: 5px 11px;
+        letter-spacing: 0.08em;
+        border-radius: 3px 0 0 3px;
+        padding: 5px 12px;
         font-weight: 500;
       }
 
@@ -481,9 +524,11 @@
         50% { opacity: 0.3; }
       }
 
-      .numbers {
-        background: var(--off-white);
+      .numbers,
+      .numbers-bar {
+        background: var(--black);
         padding: 64px 0;
+        border-bottom: none;
       }
 
       .numbers-grid {
@@ -494,24 +539,26 @@
       .num-item {
         text-align: center;
         padding: 0 14px;
-        border-right: 1px solid var(--border);
+        border-right: 1px solid rgba(250,250,250,0.08);
       }
 
       .num-item:last-child { border-right: 0; }
 
-      .num-value {
+      .num-value,
+      .counter-number {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(3.5rem, 6vw, 5rem);
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
         color: var(--indigo);
         line-height: 1;
       }
 
-      .num-label {
+      .num-label,
+      .counter-label {
         margin-top: 8px;
         font-size: 0.72rem;
         text-transform: uppercase;
         letter-spacing: 0.14em;
-        color: var(--text-muted);
+        color: rgba(250,250,250,0.45);
       }
 
       .social-proof {
@@ -549,25 +596,47 @@
         position: relative;
       }
 
-      .problem-head {
-        max-width: 680px;
-        position: relative;
-      }
-
-      .problem-watermark {
-        position: absolute;
-        top: -20px;
-        right: -80px;
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(5rem, 10vw, 9rem);
-        color: var(--grey-light);
-        z-index: 0;
-        pointer-events: none;
-      }
+      .problem-head { max-width: 680px; position: relative; }
 
       .problem-content {
         position: relative;
         z-index: 1;
+      }
+
+      .problem-stat {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        padding: 48px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        margin: 48px 0 64px;
+      }
+
+      .stat-number {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(5rem, 10vw, 8rem);
+        color: var(--text-primary);
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .stat-number span { color: var(--indigo); }
+
+      .stat-text {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .stat-text strong { color: var(--text-primary); font-weight: 500; }
+
+      .stat-source {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+        letter-spacing: 0.06em;
       }
 
       .problem-grid {
@@ -596,13 +665,16 @@
         line-height: 1;
       }
 
+      .card h3 { color: var(--text-primary); font-weight: 500; }
+
       .method {
         background: var(--white);
       }
 
       .method-head { text-align: center; max-width: 920px; margin: 0 auto 24px; }
 
-      .method-row {
+      .method-row,
+      .method-step {
         display: grid;
         grid-template-columns: 120px 160px 1fr 1fr;
         border-bottom: 1px solid var(--border);
@@ -610,19 +682,22 @@
         gap: 16px;
       }
 
-      .method-no {
+      .method-no,
+      .method-step-number {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 5rem;
-        color: var(--grey-light);
+        font-size: clamp(4rem, 7vw, 6rem);
+        color: rgba(26,25,23,0.06);
         line-height: 1;
         transition: color 0.3s;
+        user-select: none;
       }
 
-      .method-tag {
+      .method-tag,
+      .method-step-tag {
         align-self: start;
         border: 1px solid var(--border);
         color: var(--text-muted);
-        padding: 4px 12px;
+        padding: 3px 10px;
         border-radius: 3px;
         font-size: 0.65rem;
         text-transform: uppercase;
@@ -631,19 +706,30 @@
         display: inline-flex;
       }
 
-      .method-row.active {
-        background: var(--indigo-pale);
+      .method-row.active,
+      .method-step.active {
+        background: rgba(74,58,255,0.02);
         border-left: 2px solid var(--indigo);
-        padding-left: 14px;
+        padding-left: 24px;
       }
 
-      .method-row.active .method-no {
-        color: var(--indigo-soft);
+      .method-row.active .method-no,
+      .method-step.active .method-step-number {
+        color: rgba(74,58,255,0.12);
       }
 
-      .method-row.active .method-tag {
+      .method-row.active .method-tag,
+      .method-step.active .method-step-tag {
         border-color: var(--indigo);
         color: var(--indigo);
+      }
+
+      .method-row h3,
+      .method-step-title {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 1.05rem;
+        color: var(--text-primary);
       }
 
       .sectors {
@@ -661,23 +747,24 @@
       .sector-card {
         background: var(--off-white);
         padding: 28px 20px;
-        transition: background 0.25s;
+        transition: background 0.25s, transform 0.2s;
         position: relative;
       }
 
       .sector-name {
-        font-size: 0.78rem;
+        font-size: 0.82rem;
         text-transform: uppercase;
         letter-spacing: 0.12em;
-        color: var(--text-primary);
+        color: #1A1917;
         font-weight: 500;
       }
 
       .sector-desc {
         margin-top: 8px;
-        font-size: 0.82rem;
+        font-size: 0.78rem;
         color: var(--text-muted);
         font-style: italic;
+        line-height: 1.5;
       }
 
       .sector-line {
@@ -690,6 +777,7 @@
 
       .sector-card:hover {
         background: var(--white);
+        transform: translateY(-2px);
       }
 
       .sector-card:hover .sector-line {
@@ -790,27 +878,32 @@
         box-shadow: 0 20px 60px var(--indigo-glow);
       }
 
-      .stars {
+      .stars,
+      .testimonial-stars {
         color: var(--indigo);
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         letter-spacing: 3px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
-      .quote-mark {
+      .quote-mark,
+      .testimonial-quote-mark {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 4rem;
         color: var(--indigo);
-        opacity: 0.25;
+        opacity: 0.18;
         line-height: 0.7;
         display: block;
+        margin-bottom: 12px;
       }
 
-      .test-text {
+      .test-text,
+      .testimonial-text {
         margin-top: 10px;
-        color: var(--text-primary);
+        color: #1A1917;
         font-style: italic;
-        font-size: clamp(0.92rem,1.3vw,1.05rem);
+        font-size: 1rem;
+        line-height: 1.75;
       }
 
       .test-divider {
@@ -840,9 +933,10 @@
       .meta-name { color: var(--text-primary); font-weight: 500; }
       .meta-role { color: var(--text-secondary); font-size: 0.82rem; }
 
-      .result-tag {
+      .result-tag,
+      .testimonial-result {
         margin-left: auto;
-        border: 1px solid var(--indigo-soft);
+        border: 1px solid rgba(74,58,255,0.2);
         color: var(--indigo);
         font-size: 0.65rem;
         text-transform: uppercase;
@@ -902,52 +996,67 @@
         cursor: pointer;
       }
 
-      .faq-q {
-        color: var(--text-primary);
-        font-size: clamp(0.95rem,1.5vw,1.1rem);
+      .faq-q,
+      .faq-question {
+        color: #1A1917;
+        font-size: clamp(0.95rem,1.5vw,1.08rem);
         font-weight: 400;
       }
 
-      .faq-icon {
+      .faq-icon,
+      .faq-toggle {
         font-family: 'Bebas Neue', sans-serif;
         font-size: 1.8rem;
         color: var(--indigo);
         line-height: 1;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+        margin-left: 16px;
       }
 
       .faq-answer {
         max-height: 0;
         opacity: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
+        transition: max-height 0.45s ease, opacity 0.3s ease, padding 0.3s;
       }
 
       .faq-answer p {
         margin-top: 12px;
-        font-size: 0.9rem;
+        font-size: 0.92rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
       }
 
       .faq-item.open .faq-q { color: var(--indigo); }
-      .faq-item.open .faq-answer { opacity: 1; }
+      .faq-item.open .faq-toggle,
+      .faq-item.open .faq-icon { transform: rotate(45deg); }
+      .faq-item.open .faq-answer { opacity: 1; padding-top: 16px; }
 
-      .cta {
-        background:
-          linear-gradient(var(--border-soft) 1px, transparent 1px),
-          linear-gradient(90deg, var(--border-soft) 1px, transparent 1px),
-          var(--off-white);
-        background-size: 40px 40px, 40px 40px, auto;
+      .cta,
+      #cta {
+        background: var(--black);
         text-align: center;
         padding: 160px 0;
         position: relative;
         overflow: hidden;
       }
 
-      .cta h2 .line-1 { color: var(--text-primary); }
+      .cta .overline,
+      #cta .overline { color: rgba(74,58,255,0.8); }
+
+      .cta h2,
+      #cta h2 { color: var(--white); }
+
+      .cta h2 .line-1 { color: var(--white); }
       .cta h2 .line-2 { color: var(--indigo); }
+      .cta h2 .accent,
+      #cta h2 .accent { color: var(--indigo); }
 
       .cta p {
         max-width: 480px;
         margin: 28px auto 0;
+        color: rgba(250,250,250,0.5);
       }
 
       .cta-badges {
@@ -956,14 +1065,16 @@
         justify-content: center;
         gap: 24px;
         flex-wrap: wrap;
-        color: var(--text-muted);
+        color: rgba(250,250,250,0.35);
         font-size: 0.75rem;
       }
+
+      .trust-badges { color: rgba(250,250,250,0.35); margin-top: 24px; }
 
       .float-dot {
         position: absolute;
         border-radius: 50%;
-        background: var(--indigo-pale);
+        background: rgba(74,58,255,0.07);
         opacity: 0.45;
         filter: blur(1px);
         pointer-events: none;
@@ -1050,6 +1161,27 @@
         opacity: 1;
       }
 
+      .hero {
+        background-image:
+          radial-gradient(ellipse 70% 60% at 30% 50%, var(--indigo-glow) 0%, transparent 70%),
+          linear-gradient(rgba(26,25,23,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(26,25,23,0.04) 1px, transparent 1px);
+        background-size: auto, 48px 48px, 48px 48px;
+        background-color: var(--white);
+      }
+
+      .problem,
+      .sectors,
+      .testimonials {
+        background-image:
+          linear-gradient(rgba(26,25,23,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(26,25,23,0.04) 1px, transparent 1px);
+        background-size: 48px 48px;
+      }
+
+      .numbers,
+      .cta { background-image: none; }
+
       .sticky-mobile {
         position: fixed;
         left: 0;
@@ -1080,6 +1212,7 @@
         .sectors-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
         .method-row { grid-template-columns: 80px 130px 1fr; }
         .method-desc { grid-column: 1 / -1; padding-left: 0; }
+        .problem-stat { gap: 22px; }
       }
 
       @media (max-width: 768px) {
@@ -1141,7 +1274,7 @@
           transition: clip-path 0.7s cubic-bezier(0.16,1,0.3,1);
         }
 
-        .hero { min-height: auto; }
+        .hero { min-height: auto; padding-top: 96px; }
 
         .method-row,
         .why-row {
@@ -1150,6 +1283,13 @@
 
         .method-no,
         .why-no { display: none; }
+
+        .problem-stat {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 40px;
+        }
 
         .footer-grid,
         .footer-bottom { grid-template-columns: 1fr; display: grid; }
@@ -1182,7 +1322,7 @@
 
     <header class="site-header" id="home">
       <div class="container nav-row">
-        <a href="#home" class="logo">LANDCORE <span class="logo-dot"></span></a>
+        <a href="#home" class="logo nav-logo">LANDCORE <span class="logo-dot nav-logo-dot"></span></a>
 
         <nav class="nav-links">
           <a href="#metodo">Metodo</a>
@@ -1205,7 +1345,7 @@
       <a href="#cta" style="transition-delay:0.25s">Parliamo del tuo progetto</a>
     </div>
 
-    <div class="marquee-strip">
+    <div class="marquee-strip marquee-strip-1">
       <div class="marquee-track">
         <span>DESIGN ORIGINALE</span><span class="sep">—</span>
         <span>COPY SU MISURA</span><span class="sep">—</span>
@@ -1224,30 +1364,29 @@
       <section class="hero section" id="hero">
         <div class="container hero-grid">
           <div>
-            <p class="overline">🇮🇹 Design · Copy · Sviluppo · Immagini</p>
+            <p class="overline hero-pill">🇮🇹 Agenzia italiana · Landing page su misura</p>
             <h1 class="hero-title" id="heroTitle">
-              <span class="line-1">La tua Landing Page Dovrebbe Sembrare Fatta per Te.</span><br />
-              <span class="line-2">Perch&eacute; lo &Egrave;.</span>
+              <span class="line-1">LA TUA PAGINA</span><br />
+              <span class="line-2 accent">COME NESSUN'ALTRA.</span>
             </h1>
             <p class="hero-sub">
-              Ogni azienda ha una storia, un pubblico, un'estetica. Noi la studiamo, la capiamo e la traduciamo in una
-              landing page costruita da zero - con design originale, testi su misura, sviluppo tecnico e immagini
-              selezionate per il tuo settore. Niente template. Niente scorciatoie.
+              Design originale, copy su misura, sviluppo tecnico e immagini dedicate. Tutto in una pagina costruita
+              attorno a chi sei.
             </p>
 
             <div class="hero-actions">
-              <a href="#cta" class="btn btn-primary"><span>Raccontaci il tuo progetto</span></a>
-              <a href="#metodo" class="btn btn-outline">Scopri come lavoriamo →</a>
+              <a href="#cta" class="btn btn-primary"><span>Parliamo del tuo progetto →</span></a>
+              <a href="#metodo" class="btn btn-outline">Scopri come lavoriamo</a>
             </div>
 
-            <p class="hero-stats">120+ PROGETTI · 10 SETTORI · 10GG CONSEGNA</p>
+            <p class="hero-stats">120+ PROGETTI · 10 SETTORI · DESIGN + COPY + SVILUPPO + IMMAGINI</p>
           </div>
 
           <div class="hero-visual">
             <div class="mock card">
               <div class="mock-top">
                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <div class="fake-url"></div>
+                <div class="fake-url">landcore.it/cliente</div>
               </div>
               <div class="mock-body">
                 <div class="m-hero"></div>
@@ -1265,23 +1404,23 @@
         </div>
       </section>
 
-      <section class="numbers section" id="numbersBar">
+      <section class="numbers numbers-bar section" id="numbersBar">
         <div class="container numbers-grid">
           <div class="num-item reveal" style="--i:0">
-            <div class="num-value" data-counter="120" data-suffix="+">0+</div>
-            <p class="num-label">Landing page realizzate</p>
+            <div class="num-value counter-number counter-1" data-counter="120" data-suffix="+">0+</div>
+            <p class="num-label counter-label">Landing page realizzate</p>
           </div>
           <div class="num-item reveal" style="--i:1">
-            <div class="num-value" data-counter="10" data-suffix="">0</div>
-            <p class="num-label">Settori con design dedicato</p>
+            <div class="num-value counter-number counter-2" data-counter="10" data-suffix="">0</div>
+            <p class="num-label counter-label">Settori con design dedicato</p>
           </div>
           <div class="num-item reveal" style="--i:2">
-            <div class="num-value" data-counter="100" data-suffix="%">0%</div>
-            <p class="num-label">Progetti costruiti da zero</p>
+            <div class="num-value counter-number counter-3" data-counter="100" data-suffix="%">0%</div>
+            <p class="num-label counter-label">Progetti costruiti da zero</p>
           </div>
           <div class="num-item reveal" style="--i:3">
-            <div class="num-value" data-counter="10" data-suffix="gg">0gg</div>
-            <p class="num-label">Tempo medio di consegna</p>
+            <div class="num-value counter-number counter-4" data-counter="10" data-suffix="gg">0gg</div>
+            <p class="num-label counter-label">Tempo medio di consegna</p>
           </div>
         </div>
       </section>
@@ -1301,7 +1440,6 @@
       <section class="problem section" id="problema">
         <div class="container">
           <div class="problem-head reveal" style="--i:0">
-            <div class="problem-watermark">9/10</div>
             <div class="problem-content">
               <p class="overline">Il contesto</p>
               <h2>Il problema non &egrave; avere una pagina. &Egrave; avere la pagina sbagliata.</h2>
@@ -1309,23 +1447,30 @@
                 Un template scaricato, un logo incollato sopra, e via. Il risultato? Una pagina che somiglia a quella di
                 tutti gli altri. E online, chi somiglia agli altri non viene scelto.
               </p>
-              <p style="margin-top:14px"><strong style="color:var(--indigo)">9 su 10</strong> landing page italiane usano template standard non personalizzati sul settore n&eacute; sull'identit&agrave; del brand.</p>
-              <p style="margin-top:8px;font-size:0.8rem;color:var(--text-muted)">Fonte: Analisi interna su 340 siti italiani — 2024</p>
+            </div>
+          </div>
+
+          <div class="problem-stat reveal" style="--i:1">
+            <div class="stat-number">9<span>/</span>10</div>
+            <div class="stat-text">
+              <strong>landing page italiane</strong> usano template standard non personalizzati sul settore n&eacute;
+              sull'identit&agrave; del brand.
+              <span class="stat-source">Analisi interna · 340 siti monitorati · 2024</span>
             </div>
           </div>
 
           <div class="problem-grid">
-            <article class="problem-card card reveal" style="--i:1">
+            <article class="problem-card card reveal" style="--i:2">
               <div class="card-num">01</div>
               <h3>Template che non ti rappresentano.</h3>
               <p>Un dentista, un avvocato e un coach non possono avere la stessa pagina con colori diversi. Ogni settore ha un'estetica, un linguaggio visivo, un modo di trasmettere fiducia. I template non lo sanno. Noi s&igrave;.</p>
             </article>
-            <article class="problem-card card reveal" style="--i:2">
+            <article class="problem-card card reveal" style="--i:3">
               <div class="card-num">02</div>
               <h3>Testi copiati che non parlano a nessuno.</h3>
               <p>Frasi come "qualit&agrave; e professionalit&agrave;" o "esperienza e competenza" non dicono nulla di specifico su di te. Il tuo potenziale cliente legge e passa oltre. Un copy scritto su misura per il tuo settore e il tuo tono di voce fa una differenza visibile.</p>
             </article>
-            <article class="problem-card card reveal" style="--i:3">
+            <article class="problem-card card reveal" style="--i:4">
               <div class="card-num">03</div>
               <h3>Immagini stock che chiunque riconosce.</h3>
               <p>Quella foto dell'uomo in giacca che stringe la mano - la hai gi&agrave; vista su 400 siti. Le immagini giuste raccontano la tua specifica realt&agrave;, il tuo ambiente, il tuo stile. Noi curiamo anche questo.</p>
@@ -1342,31 +1487,31 @@
             <p style="margin-top:14px">La maggior parte delle agenzie esternalizza almeno una parte del lavoro. Noi gestiamo tutto internamente: design, copy, sviluppo e immagini nascono insieme, pensati come un sistema coerente.</p>
           </div>
 
-          <article class="method-row reveal" style="--i:1" data-method-row>
-            <div class="method-no">01</div>
-            <span class="method-tag">Fase 1 · Gratuita</span>
-            <h3>Ascoltiamo chi sei e chi vuoi raggiungere.</h3>
+          <article class="method-row method-step reveal" style="--i:1" data-method-row>
+            <div class="method-no method-step-number">01</div>
+            <span class="method-tag method-step-tag">Fase 1 · Gratuita</span>
+            <h3 class="method-step-title">Ascoltiamo chi sei e chi vuoi raggiungere.</h3>
             <p class="method-desc">Prima di aprire Figma o scrivere una parola, vogliamo capire la tua azienda, il tuo settore, il tuo pubblico e il tuo stile. Questa fase &egrave; gratuita e dura circa 45 minuti. &Egrave; il fondamento su cui costruiamo tutto il resto.</p>
           </article>
 
-          <article class="method-row reveal" style="--i:2" data-method-row>
-            <div class="method-no">02</div>
-            <span class="method-tag">Fase 2 · Design &amp; Copy</span>
-            <h3>Progettiamo l'identit&agrave; visiva e il messaggio.</h3>
+          <article class="method-row method-step reveal" style="--i:2" data-method-row>
+            <div class="method-no method-step-number">02</div>
+            <span class="method-tag method-step-tag">Fase 2 · Design &amp; Copy</span>
+            <h3 class="method-step-title">Progettiamo l'identit&agrave; visiva e il messaggio.</h3>
             <p class="method-desc">Il design e i testi nascono in parallelo, non in sequenza. Il layout segue il messaggio, i colori riflettono il settore, la tipografia comunica il tono di voce. Ogni scelta grafica ha una ragione precisa legata a chi sei e a chi parli.</p>
           </article>
 
-          <article class="method-row reveal" style="--i:3" data-method-row>
-            <div class="method-no">03</div>
-            <span class="method-tag">Fase 3 · Sviluppo</span>
-            <h3>Sviluppiamo e curiamo ogni dettaglio tecnico.</h3>
+          <article class="method-row method-step reveal" style="--i:3" data-method-row>
+            <div class="method-no method-step-number">03</div>
+            <span class="method-tag method-step-tag">Fase 3 · Sviluppo</span>
+            <h3 class="method-step-title">Sviluppiamo e curiamo ogni dettaglio tecnico.</h3>
             <p class="method-desc">Codice pulito, caricamento veloce, perfetta su ogni dispositivo. Gestiamo anche dominio, hosting e setup tecnico se necessario. Consegniamo una pagina pronta, non un file da passare ad altri.</p>
           </article>
 
-          <article class="method-row reveal" style="--i:4" data-method-row>
-            <div class="method-no">04</div>
-            <span class="method-tag">Fase 4 · Consegna in 10gg</span>
-            <h3>Consegniamo. Rifiniti insieme.</h3>
+          <article class="method-row method-step reveal" style="--i:4" data-method-row>
+            <div class="method-no method-step-number">04</div>
+            <span class="method-tag method-step-tag">Fase 4 · Consegna in 10gg</span>
+            <h3 class="method-step-title">Consegniamo. Rifiniti insieme.</h3>
             <p class="method-desc">Presentiamo il lavoro completo con una call dedicata. Ascoltiamo il tuo feedback e rifiniamo fino a quando non sei soddisfatto di come la pagina ti rappresenta. La pagina &egrave; tua in ogni suo elemento.</p>
           </article>
         </div>
@@ -1535,37 +1680,37 @@
           </div>
 
           <article class="faq-item reveal open" style="--i:1">
-            <button class="faq-btn" type="button"><span class="faq-q">Quanto costa una landing page con LandCore?</span><span class="faq-icon">−</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Quanto costa una landing page con LandCore?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer" style="max-height: 500px; opacity: 1"><p>Il nostro servizio completo - design su misura, copy, sviluppo e selezione immagini - parte da 1.200€. Il prezzo varia in base alla complessit&agrave; del progetto e ai servizi aggiuntivi come la produzione fotografica. In ogni caso il preventivo &egrave; fisso: nessun costo nascosto, nessuna sorpresa a fine lavori.</p></div>
           </article>
 
           <article class="faq-item reveal" style="--i:2">
-            <button class="faq-btn" type="button"><span class="faq-q">Quanto tempo ci vuole?</span><span class="faq-icon">+</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Quanto tempo ci vuole?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer"><p>10 giorni lavorativi dall'approvazione del brief. Questa &egrave; la nostra tempistica standard per un progetto completo. Per lavorazioni pi&ugrave; articolate i tempi vengono concordati prima di iniziare - sempre in modo trasparente.</p></div>
           </article>
 
           <article class="faq-item reveal" style="--i:3">
-            <button class="faq-btn" type="button"><span class="faq-q">Devo gi&agrave; avere un sito?</span><span class="faq-icon">+</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Devo gi&agrave; avere un sito?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer"><p>No. La landing page pu&ograve; vivere come pagina standalone con un suo dominio, oppure essere integrata nel sito che hai gi&agrave;. Gestiamo entrambe le situazioni, incluso il setup tecnico completo.</p></div>
           </article>
 
           <article class="faq-item reveal" style="--i:4">
-            <button class="faq-btn" type="button"><span class="faq-q">Fornite anche dominio e hosting?</span><span class="faq-icon">+</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Fornite anche dominio e hosting?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer"><p>S&igrave;. Per chi parte da zero offriamo un pacchetto completo con dominio, hosting, certificato SSL e configurazione tecnica. Chi ha gi&agrave; un provider pu&ograve; continuare ad usarlo - ci adattiamo noi.</p></div>
           </article>
 
           <article class="faq-item reveal" style="--i:5">
-            <button class="faq-btn" type="button"><span class="faq-q">Quante revisioni sono incluse?</span><span class="faq-icon">+</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Quante revisioni sono incluse?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer"><p>Includiamo due cicli di revisione nel prezzo. La nostra esperienza ci dice che con un brief ben fatto, &egrave; pi&ugrave; che sufficiente per arrivare a un risultato che ti soddisfa pienamente. Se necessario, ulteriori revisioni vengono concordate.</p></div>
           </article>
 
           <article class="faq-item reveal" style="--i:6">
-            <button class="faq-btn" type="button"><span class="faq-q">Producete anche le fotografie?</span><span class="faq-icon">+</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Producete anche le fotografie?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer"><p>S&igrave;, per chi vuole il massimo della coerenza visiva organizziamo sessioni fotografiche dedicate. &Egrave; un servizio opzionale che aggiungiamo al progetto base. Le foto vengono scattate, selezionate e ottimizzate per la pagina - nessuna foto stock generica.</p></div>
           </article>
 
           <article class="faq-item reveal" style="--i:7">
-            <button class="faq-btn" type="button"><span class="faq-q">Lavorate solo con aziende gi&agrave; avviate?</span><span class="faq-icon">+</span></button>
+            <button class="faq-btn" type="button"><span class="faq-q">Lavorate solo con aziende gi&agrave; avviate?</span><span class="faq-icon faq-toggle">+</span></button>
             <div class="faq-answer"><p>No. Lavoriamo anche con professionisti che si lanciano per la prima volta online e hanno bisogno di costruire tutto da zero - identit&agrave; visiva inclusa. Anzi, &egrave; uno dei contesti in cui il nostro approccio su misura fa la differenza maggiore.</p></div>
           </article>
         </div>
@@ -1574,7 +1719,7 @@
       <section class="cta section" id="cta">
         <div class="container reveal" style="--i:0">
           <p class="overline">Iniziamo</p>
-          <h2><span class="line-1">Hai un'azienda che merita</span><br /><span class="line-2">una pagina all'altezza.</span></h2>
+          <h2><span class="line-1">Hai un'azienda che merita</span><br /><span class="line-2 accent">una pagina all'altezza.</span></h2>
           <p>Una landing page &egrave; spesso il primo contatto che un potenziale cliente ha con te. Quella prima impressione vale. Raccontaci il tuo progetto: in 20 minuti capiamo insieme cosa ti serve e come possiamo farlo.</p>
           <a href="#home" class="btn btn-primary" style="margin-top:28px"><span>Parliamo del tuo progetto →</span></a>
           <div class="cta-badges"><span>🎨 Design su misura</span><span>📝 Copy incluso</span><span>⚡ 10 giorni</span></div>
@@ -1615,6 +1760,30 @@
     <a class="sticky-mobile" id="stickyMobile" href="#cta">Parliamo del tuo progetto →</a>
 
     <script>
+      const introOverlay = document.createElement('div');
+      introOverlay.style.cssText = `
+        position: fixed; inset: 0; z-index: 99999;
+        background: #1A1917;
+        display: flex; align-items: center; justify-content: center;
+        transition: opacity 0.8s cubic-bezier(0.76,0,0.24,1) 0.4s, visibility 0.8s 0.4s;
+      `;
+      introOverlay.innerHTML = `<span style="
+        font-family:'Bebas Neue',sans-serif;
+        font-size:2rem; letter-spacing:0.12em;
+        color:white; opacity:0;
+        animation: fadeInOutLandcore 0.8s ease 0.1s forwards;
+      ">LANDCORE</span>`;
+      document.head.insertAdjacentHTML('beforeend', `
+        <style>
+          @keyframes fadeInOutLandcore {
+            0% { opacity:0; transform:translateY(8px); }
+            50% { opacity:1; transform:translateY(0); }
+            100% { opacity:0.8; }
+          }
+        </style>
+      `);
+      document.body.prepend(introOverlay);
+
       const progress = document.getElementById('progress');
       const header = document.querySelector('.site-header');
       const menuToggle = document.getElementById('menuToggle');
@@ -1635,6 +1804,12 @@
       }
       window.addEventListener('scroll', updateScroll, { passive: true });
       updateScroll();
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          introOverlay.style.opacity = '0';
+          introOverlay.style.visibility = 'hidden';
+        }, 900);
+      });
 
       if (window.matchMedia('(hover: hover)').matches) {
         let mx = 0, my = 0, rx = 0, ry = 0;
@@ -1688,18 +1863,35 @@
 
       const heroTitle = document.getElementById('heroTitle');
       if (heroTitle) {
-        const source = heroTitle.textContent.trim();
-        const words = source.split(/\s+/);
-        heroTitle.textContent = '';
-        words.forEach((word, i) => {
-          const wrap = document.createElement('span');
-          wrap.className = 'hero-word';
-          const inner = document.createElement('span');
-          inner.textContent = word;
-          inner.style.animationDelay = `${i * 0.05}s`;
-          wrap.appendChild(inner);
-          heroTitle.appendChild(wrap);
+        const parts = [];
+        let index = 0;
+        heroTitle.childNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+            parts.push(document.createElement('br'));
+            return;
+          }
+
+          const container = node.nodeType === Node.ELEMENT_NODE ? node : null;
+          const className = container ? container.className : '';
+          const text = (container ? container.textContent : node.textContent || '').trim();
+          if (!text) return;
+          const lineFrag = document.createDocumentFragment();
+          text.split(/\s+/).forEach((word) => {
+            const wrap = document.createElement(container ? container.tagName.toLowerCase() : 'span');
+            if (className) wrap.className = className;
+            wrap.classList.add('hero-word');
+            const inner = document.createElement('span');
+            inner.textContent = word;
+            inner.style.animationDelay = `${0.3 + index * 0.05}s`;
+            wrap.appendChild(inner);
+            lineFrag.appendChild(wrap);
+            lineFrag.appendChild(document.createTextNode(' '));
+            index += 1;
+          });
+          parts.push(lineFrag);
         });
+        heroTitle.textContent = '';
+        parts.forEach((part) => heroTitle.appendChild(part));
       }
 
       const revealEls = Array.from(document.querySelectorAll('.reveal'));
@@ -1836,7 +2028,6 @@
       faqItems.forEach((item) => {
         const btn = item.querySelector('.faq-btn');
         const ans = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
 
         btn.addEventListener('click', () => {
           faqItems.forEach((other) => {
@@ -1844,13 +2035,11 @@
             other.classList.remove('open');
             other.querySelector('.faq-answer').style.maxHeight = null;
             other.querySelector('.faq-answer').style.opacity = '0';
-            other.querySelector('.faq-icon').textContent = '+';
           });
 
           const open = item.classList.toggle('open');
           ans.style.maxHeight = open ? '500px' : null;
           ans.style.opacity = open ? '1' : '0';
-          icon.textContent = open ? '−' : '+';
         });
       });
 
